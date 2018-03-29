@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Articles.WriteSide.Aggregates\Articles.WriteSide.Aggregates.csproj" />
+    <ProjectReference Include="..\Articles.WriteSide.Commands\Articles.WriteSide.Commands.csproj" />
+    <ProjectReference Include="..\Articles.WriteSide.Repository\Articles.WriteSide.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

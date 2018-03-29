@@ -4,3 +4,6 @@ F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csp
 F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CoreCompileInputs.cache
 F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfoInputs.cache
 F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfo.cs
+F:\EShopMicroservices\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.pdb
+F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.dll
+F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.pdb

@@ -1,0 +1,15 @@
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Infrastructure.dll
+F:\EShopMicroservices\Articles.WriteSide.Repository\obj\Debug\netstandard2.0\Articles.WriteSide.Repository.csprojResolveAssemblyReference.cache
+F:\EShopMicroservices\Articles.WriteSide.Repository\obj\Debug\netstandard2.0\Articles.WriteSide.Repository.csproj.CoreCompileInputs.cache
+F:\EShopMicroservices\Articles.WriteSide.Repository\obj\Debug\netstandard2.0\Articles.WriteSide.Repository.AssemblyInfoInputs.cache
+F:\EShopMicroservices\Articles.WriteSide.Repository\obj\Debug\netstandard2.0\Articles.WriteSide.Repository.AssemblyInfo.cs
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Articles.WriteSide.Repository.deps.json
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Articles.WriteSide.Repository.dll
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Articles.WriteSide.Repository.pdb
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Articles.WriteSide.Commands.dll
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Articles.WriteSide.Events.dll
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Articles.WriteSide.Events.pdb
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Infrastructure.pdb
+F:\EShopMicroservices\Articles.WriteSide.Repository\bin\Debug\netstandard2.0\Articles.WriteSide.Commands.pdb
+F:\EShopMicroservices\Articles.WriteSide.Repository\obj\Debug\netstandard2.0\Articles.WriteSide.Repository.dll
+F:\EShopMicroservices\Articles.WriteSide.Repository\obj\Debug\netstandard2.0\Articles.WriteSide.Repository.pdb

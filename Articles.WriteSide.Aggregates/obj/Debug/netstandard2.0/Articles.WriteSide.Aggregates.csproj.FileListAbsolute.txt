@@ -1,0 +1,15 @@
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Articles.WriteSide.Aggregates.deps.json
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Articles.WriteSide.Aggregates.dll
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Articles.WriteSide.Aggregates.pdb
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Articles.WriteSide.Commands.dll
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Articles.WriteSide.Events.dll
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Infrastructure.dll
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Articles.WriteSide.Events.pdb
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Infrastructure.pdb
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\bin\Debug\netstandard2.0\Articles.WriteSide.Commands.pdb
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\obj\Debug\netstandard2.0\Articles.WriteSide.Aggregates.csprojResolveAssemblyReference.cache
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\obj\Debug\netstandard2.0\Articles.WriteSide.Aggregates.csproj.CoreCompileInputs.cache
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\obj\Debug\netstandard2.0\Articles.WriteSide.Aggregates.AssemblyInfoInputs.cache
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\obj\Debug\netstandard2.0\Articles.WriteSide.Aggregates.AssemblyInfo.cs
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\obj\Debug\netstandard2.0\Articles.WriteSide.Aggregates.dll
+F:\EShopMicroservices\Articles.WriteSide.Aggregates\obj\Debug\netstandard2.0\Articles.WriteSide.Aggregates.pdb
