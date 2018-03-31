@@ -1,21 +1,18 @@
 ﻿using System.Threading.Tasks;
 using Articles.WriteSide.Aggregates;
 using Articles.WriteSide.Commands;
-using Infrastructure.DataAccess;
 using MassTransit;
 
 namespace Articles.WriteSide.Service.CommandHandlers
 {
-	public class RateArticleCommandHandler : IConsumer<IRateArticleCommand>
-	{
-		private static IEventRepository EventRepository { get; set; }
-
+	public class RateArticleCommandHandler : BaseCommandHandler, IConsumer<IRateArticleCommand>
+	{ 
 		public async Task Consume(ConsumeContext<IRateArticleCommand> context)
 		{
 			var command = context.Message;
 
 			Article article = await EventRepository.GetByIdAsync<Article>(command.Id);
-			article.RateArticle();
+			article.RateArticle(command.Rating);
 			await EventRepository.PersistAsync(article);
 		}
 	}

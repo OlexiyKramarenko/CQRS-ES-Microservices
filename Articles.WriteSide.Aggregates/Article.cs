@@ -15,7 +15,6 @@ namespace Articles.WriteSide.Aggregates
 		IHandle<ArticleUpdatedCommand>,
 		IHandle<ArticleViewCountIncrementedEvent>
 	{
-		public Guid Id { get; set; }
 		public DateTime AddedDate { get; set; }
 		public string AddedBy { get; set; }
 		public Guid CategoryId { get; set; }
@@ -87,8 +86,7 @@ namespace Articles.WriteSide.Aggregates
 			ApplyChange(@event);
 		}
 
-		public void Update (
-			Guid id,
+		public void Update(
 			Guid categoryId,
 			string title,
 			string @abstract,
@@ -103,9 +101,9 @@ namespace Articles.WriteSide.Aggregates
 			bool commentsEnabled,
 			bool onlyForMembers)
 		{
-			Events.Add(new ArticleUpdatedCommand
+			var @event = new ArticleUpdatedCommand
 			{
-				AggregateId = id,
+				AggregateId = Id,
 				Abstract = @abstract,
 				Approved = approved,
 				Body = body,
@@ -119,35 +117,48 @@ namespace Articles.WriteSide.Aggregates
 				ReleaseDate = releaseDate,
 				State = state,
 				Title = title
-			});
+			};
+			ApplyChange(@event);
 		}
 
-		public void Delete ()
+		public void Delete()
 		{
-			Events.Add(new ArticleDeletedEvent { AggregateId = Id });
-		} 
-		public void RateArticle()
+			var @event = new ArticleDeletedEvent
+			{
+				AggregateId = Id
+			};
+			ApplyChange(@event);
+		}
+
+		public void RateArticle(int rating)
 		{
-			Events.Add(new ArticleRatedEvent { AggregateId = Id });
+			var @event = new ArticleRatedEvent
+			{
+				AggregateId = Id,
+				Rating = rating
+			};
+			ApplyChange(@event);
 		}
 
 		public void IncrementArticleViewCount()
 		{
-			Events.Add(new ArticleViewCountIncrementedEvent
+			var @event = new ArticleViewCountIncrementedEvent
 			{
 				AggregateId = Id
-			});
+			};
+			ApplyChange(@event);
 		}
 
-		public void Approve ()
+		public void Approve()
 		{
-			ApplyChange(new ArticleApprovedEvent
+			var @event = new ArticleApprovedEvent
 			{
 				AggregateId = Id
-			});
+			};
+			ApplyChange(@event);
 		}
 
-		 
+
 
 		public void Handle(ArticleApprovedEvent @event)
 		{
@@ -209,6 +220,6 @@ namespace Articles.WriteSide.Aggregates
 		public void Handle(ArticleViewCountIncrementedEvent @event)
 		{
 			Id = @event.AggregateId;
-		} 
+		}
 	}
 }

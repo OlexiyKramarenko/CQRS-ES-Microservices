@@ -1,15 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Articles.WriteSide.Aggregates;
 using Articles.WriteSide.Commands;
-using Infrastructure.DataAccess;
 using MassTransit;
 
 namespace Articles.WriteSide.Service.CommandHandlers
 {
-	public class DeleteCategoryCommandHandler : IConsumer<IDeleteCategoryCommand>
-	{
-		private static IEventRepository EventRepository { get; set; }
-
+	public class DeleteCategoryCommandHandler : BaseCommandHandler, IConsumer<IDeleteCategoryCommand>
+	{  
 		public async Task Consume(ConsumeContext<IDeleteCategoryCommand> context)
 		{
 			var command = context.Message;

@@ -1,15 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Articles.WriteSide.Aggregates;
-using Articles.WriteSide.Commands;
-using Infrastructure.DataAccess;
+using Articles.WriteSide.Commands; 
 using MassTransit;
 
 namespace Articles.WriteSide.Service.CommandHandlers
 {
-	public class DeleteCommentCommandHandler : IConsumer<IDeleteCommentCommand>
+	public class DeleteCommentCommandHandler : BaseCommandHandler, IConsumer<IDeleteCommentCommand>
 	{
-		private static IEventRepository EventRepository { get; set; }
-
 		public async Task Consume(ConsumeContext<IDeleteCommentCommand> context)
 		{
 			var command = context.Message;
@@ -17,6 +14,6 @@ namespace Articles.WriteSide.Service.CommandHandlers
 			Comment comment = await EventRepository.GetByIdAsync<Comment>(command.Id);
 			comment.Delete();
 			await EventRepository.PersistAsync(comment);
-		} 
+		}
 	}
 }

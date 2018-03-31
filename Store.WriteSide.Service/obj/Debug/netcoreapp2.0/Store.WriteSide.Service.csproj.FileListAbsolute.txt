@@ -1,0 +1,4 @@
+F:\EShopMicroservices\Store.WriteSide.Service\obj\Debug\netcoreapp2.0\Store.WriteSide.Service.csprojResolveAssemblyReference.cache
+F:\EShopMicroservices\Store.WriteSide.Service\obj\Debug\netcoreapp2.0\Store.WriteSide.Service.csproj.CoreCompileInputs.cache
+F:\EShopMicroservices\Store.WriteSide.Service\obj\Debug\netcoreapp2.0\Store.WriteSide.Service.AssemblyInfoInputs.cache
+F:\EShopMicroservices\Store.WriteSide.Service\obj\Debug\netcoreapp2.0\Store.WriteSide.Service.AssemblyInfo.cs

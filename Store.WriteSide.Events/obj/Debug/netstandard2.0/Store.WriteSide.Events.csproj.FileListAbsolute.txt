@@ -1,0 +1,11 @@
+F:\EShopMicroservices\Store.WriteSide.Events\bin\Debug\netstandard2.0\Store.WriteSide.Events.deps.json
+F:\EShopMicroservices\Store.WriteSide.Events\bin\Debug\netstandard2.0\Store.WriteSide.Events.dll
+F:\EShopMicroservices\Store.WriteSide.Events\bin\Debug\netstandard2.0\Store.WriteSide.Events.pdb
+F:\EShopMicroservices\Store.WriteSide.Events\bin\Debug\netstandard2.0\Infrastructure.dll
+F:\EShopMicroservices\Store.WriteSide.Events\bin\Debug\netstandard2.0\Infrastructure.pdb
+F:\EShopMicroservices\Store.WriteSide.Events\obj\Debug\netstandard2.0\Store.WriteSide.Events.csprojResolveAssemblyReference.cache
+F:\EShopMicroservices\Store.WriteSide.Events\obj\Debug\netstandard2.0\Store.WriteSide.Events.csproj.CoreCompileInputs.cache
+F:\EShopMicroservices\Store.WriteSide.Events\obj\Debug\netstandard2.0\Store.WriteSide.Events.AssemblyInfoInputs.cache
+F:\EShopMicroservices\Store.WriteSide.Events\obj\Debug\netstandard2.0\Store.WriteSide.Events.AssemblyInfo.cs
+F:\EShopMicroservices\Store.WriteSide.Events\obj\Debug\netstandard2.0\Store.WriteSide.Events.dll
+F:\EShopMicroservices\Store.WriteSide.Events\obj\Debug\netstandard2.0\Store.WriteSide.Events.pdb

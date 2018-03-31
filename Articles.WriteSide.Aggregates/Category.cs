@@ -10,7 +10,6 @@ namespace Articles.WriteSide.Aggregates
 		IHandle<CategoryDeletedEvent>,
 		IHandle<CategoryInsertedEvent>
 	{
-		public Guid Id { get; set; }
 		public DateTime AddedDate { get; set; }
 		public string AddedBy { get; set; }
 		public string Title { get; set; }
@@ -33,8 +32,8 @@ namespace Articles.WriteSide.Aggregates
 		{
 			var @event = new CategoryInsertedEvent
 			{
-				AddedBy = AddedBy,
 				AggregateId = id,
+				AddedBy = AddedBy,
 				AddedDate = AddedDate,
 				Description = Description,
 				ImageUrl = ImageUrl,
@@ -45,25 +44,29 @@ namespace Articles.WriteSide.Aggregates
 		}
 
 		public void Update(
-			Guid id,
 			string title,
 			int importance,
 			string description,
 			string imageUrl)
 		{
-			Events.Add(new CategoryUpdatedEvent
+			var @event = new CategoryUpdatedEvent
 			{
 				AggregateId = Id,
 				Description = description,
 				ImageUrl = imageUrl,
 				Importance = importance,
 				Title = title
-			});
+			};
+			ApplyChange(@event);
 		}
 
 		public void Delete()
 		{
-			Events.Add(new CategoryDeletedEvent { AggregateId = Id });
+			var @event = new CategoryDeletedEvent
+			{
+				AggregateId = Id
+			};
+			ApplyChange(@event);
 		}
 
 		public void Handle(CategoryInsertedEvent @event)

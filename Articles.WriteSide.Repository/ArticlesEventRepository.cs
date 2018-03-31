@@ -1,6 +1,5 @@
 ﻿using Articles.WriteSide.Events.ToSaga;
-using Articles.WriteSide.Repository.Enums;
-using Articles.WriteSide.Repository.Exceptions;
+using Infrastructure;
 using Infrastructure.Contracts;
 using Infrastructure.DataAccess;
 using Infrastructure.Domain;
@@ -61,8 +60,8 @@ namespace Articles.WriteSide.Repository
 														 .ToListAsync();
 			if (!eventEntities.Any())
 			{
-				throw new ArticlesException(
-					ArticlesExceptionType.AggregateNotFound,
+				throw new MessagingException(
+					MessagingExceptionType.AggregateNotFound,
 					typeof(TAggregate));
 			}
 
@@ -83,7 +82,7 @@ namespace Articles.WriteSide.Repository
 
 			if (verifiableVersion != currentAggregateVersion)
 			{
-				throw new ArticlesException(ArticlesExceptionType.EventStoreConcurency);
+				throw new MessagingException(MessagingExceptionType.EventStoreConcurency);
 			}
 		}
 	}

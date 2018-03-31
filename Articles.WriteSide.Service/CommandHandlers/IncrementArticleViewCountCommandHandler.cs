@@ -1,15 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Articles.WriteSide.Aggregates;
 using Articles.WriteSide.Commands;
-using Infrastructure.DataAccess;
 using MassTransit;
 
 namespace Articles.WriteSide.Service.CommandHandlers
 {
-	public class IncrementArticleViewCountCommandHandler : IConsumer<IIncrementArticleViewCountCommand>
-	{
-		private static IEventRepository EventRepository { get; set; }
-
+	public class IncrementArticleViewCountCommandHandler : BaseCommandHandler, IConsumer<IIncrementArticleViewCountCommand>
+	{ 
 		public async Task Consume(ConsumeContext<IIncrementArticleViewCountCommand> context)
 		{
 			var command = context.Message;

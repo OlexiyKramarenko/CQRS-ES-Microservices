@@ -1,15 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Articles.WriteSide.Aggregates;
 using Articles.WriteSide.Commands;
-using Infrastructure.DataAccess;
 using MassTransit;
 
 namespace Articles.WriteSide.Service.CommandHandlers
 {
-	public class InsertCategoryCommandHandler : IConsumer<IInsertCategoryCommand>
-	{
-		private static IEventRepository EventRepository { get; set; }
-
+	public class InsertCategoryCommandHandler : BaseCommandHandler, IConsumer<IInsertCategoryCommand>
+	{ 
 		public async Task Consume(ConsumeContext<IInsertCategoryCommand> context)
 		{
 			var command = context.Message;

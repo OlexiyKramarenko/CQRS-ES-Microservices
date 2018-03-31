@@ -14,6 +14,7 @@
     <ProjectReference Include="..\Articles.WriteSide.Aggregates\Articles.WriteSide.Aggregates.csproj" />
     <ProjectReference Include="..\Articles.WriteSide.Commands\Articles.WriteSide.Commands.csproj" />
     <ProjectReference Include="..\Articles.WriteSide.Repository\Articles.WriteSide.Repository.csproj" />
+    <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,6 @@ namespace Articles.WriteSide.Aggregates
 		IHandle<CommentInsertedEvent>,
 		IHandle<CommentUpdatedEvent>
 	{
-		public Guid Id { get; set; }
 		public DateTime AddedDate { get; set; }
 		public string AddedBy { get; set; }
 		public string AddedByEmail { get; set; }
@@ -25,7 +24,7 @@ namespace Articles.WriteSide.Aggregates
 		}
 
 		public Comment(
-			Guid AggregateId,
+			Guid id,
 			DateTime AddedDate,
 			string AddedBy,
 			string AddedByEmail,
@@ -35,11 +34,11 @@ namespace Articles.WriteSide.Aggregates
 		{
 			var @event = new CommentInsertedEvent
 			{
+				AggregateId = id,
 				AddedBy = AddedBy,
 				AddedByEmail = AddedByEmail,
 				AddedByIp = AddedByIp,
 				AddedDate = AddedDate,
-				AggregateId = AggregateId,
 				ArticleId = ArticleId,
 				Body = Body
 			};
@@ -48,16 +47,21 @@ namespace Articles.WriteSide.Aggregates
 
 		public void Delete()
 		{
-			Events.Add(new CommentDeletedEvent { AggregateId = Id });
+			var @event = new CommentDeletedEvent
+			{
+				AggregateId = Id
+			};
+			ApplyChange(@event);
 		}
 
 		public void Update()
 		{
-			Events.Add(new CommentUpdatedEvent
+			var @event = new CommentUpdatedEvent
 			{
 				AggregateId = Id,
 				Body = Body
-			});
+			};
+			ApplyChange(@event);
 		}
 
 		public void Handle(CommentDeletedEvent @event)

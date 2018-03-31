@@ -1,15 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Articles.WriteSide.Aggregates;
-using Articles.WriteSide.Commands;
-using Infrastructure.DataAccess;
+using Articles.WriteSide.Commands; 
 using MassTransit;
 
 namespace Articles.WriteSide.Service.CommandHandlers
 {
-	public class ApproveArticleCommandHandler : IConsumer<IApproveArticleCommand>
-	{
-		private static IEventRepository EventRepository { get; set; }
-		
+	public class ApproveArticleCommandHandler : BaseCommandHandler, IConsumer<IApproveArticleCommand>
+	{ 
 		public async Task Consume(ConsumeContext<IApproveArticleCommand> context)
 		{
 			var command = context.Message;
