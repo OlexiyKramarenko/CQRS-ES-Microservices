@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Articles.WriteSide.Aggregates;
 using Articles.WriteSide.Commands;
-using Infrastructure.DataAccess;
 using MassTransit;
 
 namespace Articles.WriteSide.Service.CommandHandlers

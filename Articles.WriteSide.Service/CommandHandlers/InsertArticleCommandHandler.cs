@@ -31,7 +31,7 @@ namespace Articles.WriteSide.Service.CommandHandlers
 				command.ViewCount,
 				command.Votes,
 				command.TotalRating);
-
+			
 			await EventRepository.PersistAsync(article);
 		}
 	}

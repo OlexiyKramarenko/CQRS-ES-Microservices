@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.WriteSide.Service", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{7FD10624-3590-43B3-90C7-FF04DF30B7F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{CA32A059-7D6B-48A6-9973-9DBD7AA55592}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{7FD10624-3590-43B3-90C7-FF04DF30B7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FD10624-3590-43B3-90C7-FF04DF30B7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FD10624-3590-43B3-90C7-FF04DF30B7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

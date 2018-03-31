@@ -1,7 +1,7 @@
 ﻿using Infrastructure.DataAccess;
 using MassTransit;
 using Store.WriteSide.Aggregates;
-using Store.WriteSide.Commands; 
+using Store.WriteSide.Commands;
 using System.Threading.Tasks;
 
 namespace Store.WriteSide.Service.CommandHandlers
@@ -13,7 +13,11 @@ namespace Store.WriteSide.Service.CommandHandlers
 		public async Task Consume(ConsumeContext<IInsertProductCommand> context)
 		{
 			var command = context.Message;
-			Product product = await EventRepository.GetByIdAsync<Product>(command.Id);
+			Product product = new Product(command.Id, command.AddedDate, command.AddedBy,
+				command.DepartmentId, command.Title, command.Description, command.SKU,
+				command.UnitPrice, command.DiscountPercentage, command.UnitsInStock,
+				command.SmallImageUrl, command.FullImageUrl, command.Votes, command.TotalRating);
+
 			await EventRepository.PersistAsync(product);
 		}
 	}
