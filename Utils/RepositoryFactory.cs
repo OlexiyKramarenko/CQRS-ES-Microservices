@@ -15,5 +15,6 @@ namespace Utils
 		{
 			return new StoreEventRepository(new StoreEventContext(connectionString));
 		}
+		
 	}
 }

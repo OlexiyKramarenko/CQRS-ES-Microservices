@@ -27,7 +27,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.WriteSide.Service", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{7FD10624-3590-43B3-90C7-FF04DF30B7F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{CA32A059-7D6B-48A6-9973-9DBD7AA55592}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{CA32A059-7D6B-48A6-9973-9DBD7AA55592}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.ReadSide.Repository", "Articles.ReadSide.Repository\Articles.ReadSide.Repository.csproj", "{75D48CA5-343F-4D45-AE85-0A6838B9A171}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.ReadSide.Service", "Articles.ReadSide.Service\Articles.ReadSide.Service.csproj", "{0D91116E-D958-4E04-9010-326A50F422B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.Saga.Events", "Articles.Saga.Events\Articles.Saga.Events.csproj", "{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.Saga.Service", "Articles.Saga.Service\Articles.Saga.Service.csproj", "{42F4C583-599E-443C-973E-0DD184BF6196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.ReactJS", "Client.ReactJS\Client.ReactJS.csproj", "{0229F276-A4DB-483B-9220-BF3210B25222}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +97,26 @@ Global
 		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D48CA5-343F-4D45-AE85-0A6838B9A171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D48CA5-343F-4D45-AE85-0A6838B9A171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D48CA5-343F-4D45-AE85-0A6838B9A171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D48CA5-343F-4D45-AE85-0A6838B9A171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D91116E-D958-4E04-9010-326A50F422B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D91116E-D958-4E04-9010-326A50F422B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D91116E-D958-4E04-9010-326A50F422B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D91116E-D958-4E04-9010-326A50F422B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F4C583-599E-443C-973E-0DD184BF6196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F4C583-599E-443C-973E-0DD184BF6196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F4C583-599E-443C-973E-0DD184BF6196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F4C583-599E-443C-973E-0DD184BF6196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0229F276-A4DB-483B-9220-BF3210B25222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0229F276-A4DB-483B-9220-BF3210B25222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0229F276-A4DB-483B-9220-BF3210B25222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0229F276-A4DB-483B-9220-BF3210B25222}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

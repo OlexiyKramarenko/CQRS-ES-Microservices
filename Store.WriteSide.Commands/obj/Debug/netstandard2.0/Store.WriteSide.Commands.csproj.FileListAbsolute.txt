@@ -1,4 +1,0 @@
-F:\EShopMicroservices\Store.WriteSide.Commands\obj\Debug\netstandard2.0\Store.WriteSide.Commands.csprojResolveAssemblyReference.cache
-F:\EShopMicroservices\Store.WriteSide.Commands\obj\Debug\netstandard2.0\Store.WriteSide.Commands.csproj.CoreCompileInputs.cache
-F:\EShopMicroservices\Store.WriteSide.Commands\obj\Debug\netstandard2.0\Store.WriteSide.Commands.AssemblyInfoInputs.cache
-F:\EShopMicroservices\Store.WriteSide.Commands\obj\Debug\netstandard2.0\Store.WriteSide.Commands.AssemblyInfo.cs

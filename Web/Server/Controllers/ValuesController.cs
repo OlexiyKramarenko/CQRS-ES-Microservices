@@ -21,6 +21,11 @@ namespace Web.Controllers
 
 			var endPoint = await bus.GetSendEndpoint(sendToUri);
 
+			await endPoint.Send<IInsertCommentCommand>(new
+			{
+				AddedBy = "Ukraine"
+			});
+
 			await endPoint.Send<IInsertArticleCommand>(new
 			{
 				Country = "Ukraine"

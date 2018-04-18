@@ -1,4 +1,5 @@
-﻿using Articles.WriteSide.Events.ToSaga;
+﻿using Articles.WriteSide.Commands.Cancel;
+using Articles.WriteSide.Events.ToSaga;
 using Infrastructure.Contracts;
 using Infrastructure.Domain;
 using System;
@@ -220,6 +221,11 @@ namespace Articles.WriteSide.Aggregates
 		public void Handle(ArticleViewCountIncrementedEvent @event)
 		{
 			Id = @event.AggregateId;
+		}
+
+		public void Handle(IInsertCommentCancelCommand @event)
+		{
+			
 		}
 	}
 }
