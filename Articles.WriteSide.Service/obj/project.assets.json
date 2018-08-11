@@ -166,33 +166,6 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.FileExtensions/2.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "2.0.1",
-          "Microsoft.Extensions.FileProviders.Physical": "2.0.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Configuration.Json/2.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "2.0.1",
-          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.1",
-          "Newtonsoft.Json": "10.0.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
-        }
-      },
       "Microsoft.Extensions.DependencyInjection/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -212,40 +185,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.FileProviders.Abstractions/2.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "2.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.FileProviders.Physical/2.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.1",
-          "Microsoft.Extensions.FileSystemGlobbing": "2.0.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
-        }
-      },
-      "Microsoft.Extensions.FileSystemGlobbing/2.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/2.0.0": {
@@ -2410,14 +2349,11 @@
       },
       "Utils/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Articles.WriteSide.Repository": "1.0.0",
           "Infrastructure": "1.0.0",
           "MassTransit.RabbitMQ": "4.0.1",
-          "Microsoft.Extensions.Configuration": "2.0.1",
-          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.1",
-          "Microsoft.Extensions.Configuration.Json": "2.0.1",
           "Store.WriteSide.Repository": "1.0.0"
         },
         "compile": {
@@ -2610,28 +2546,6 @@
         "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.FileExtensions/2.0.1": {
-      "sha512": "ig55mY9fpfvVbQLuiT1ETjpYuI33RiSfhdon0nfl3m9cRSCJrrq2X7MXus2ihh2eW3ev+jPBHWNOFjN0YRN3cg==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration.fileextensions/2.0.1",
-      "files": [
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.xml",
-        "microsoft.extensions.configuration.fileextensions.2.0.1.nupkg.sha512",
-        "microsoft.extensions.configuration.fileextensions.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Configuration.Json/2.0.1": {
-      "sha512": "RIh+RKEFkLDNeOhwPasPslqVDr72NVedR0rNKwxWnCZftAlSa4jmKg7nCacB4pU7rK2TMgl85ZaHZmrxC7Rcew==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration.json/2.0.1",
-      "files": [
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.xml",
-        "microsoft.extensions.configuration.json.2.0.1.nupkg.sha512",
-        "microsoft.extensions.configuration.json.nuspec"
-      ]
-    },
     "Microsoft.Extensions.DependencyInjection/2.0.0": {
       "sha512": "wakg18gHYiUL1pcjjyZuYk6OvDpbSw1E7IWxm78TMepsr+gQ8W0tWzuRm0q/9RFblngwPwo15rrgZSUV51W5Iw==",
       "type": "package",
@@ -2652,39 +2566,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.FileProviders.Abstractions/2.0.1": {
-      "sha512": "Gzc5yXvwIrKpdti0Ev4jC0inVrGZpI86eLZorMVRqAPXowR8JDRbcHjhmID2EqA4rdhL/IsfD42+4upKpHULDw==",
-      "type": "package",
-      "path": "microsoft.extensions.fileproviders.abstractions/2.0.1",
-      "files": [
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "microsoft.extensions.fileproviders.abstractions.2.0.1.nupkg.sha512",
-        "microsoft.extensions.fileproviders.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.FileProviders.Physical/2.0.1": {
-      "sha512": "h+6bcXYlGldl7BUhnQKFxL2sMfeg9Gr/AuVexYOCYWmzDsc4iyUoy3NL7i2vkG209wd0ZXf+pZzRDwGPFhmlSw==",
-      "type": "package",
-      "path": "microsoft.extensions.fileproviders.physical/2.0.1",
-      "files": [
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.xml",
-        "microsoft.extensions.fileproviders.physical.2.0.1.nupkg.sha512",
-        "microsoft.extensions.fileproviders.physical.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.FileSystemGlobbing/2.0.1": {
-      "sha512": "q7KsG2kjwo2Ps0WdV7MFh64cQS0UHikV8qv4HQrUfWQyxim5vNmLzAbuduarS9QWbhRHTtUanx+ohyAQdumdnw==",
-      "type": "package",
-      "path": "microsoft.extensions.filesystemglobbing/2.0.1",
-      "files": [
-        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
-        "microsoft.extensions.filesystemglobbing.2.0.1.nupkg.sha512",
-        "microsoft.extensions.filesystemglobbing.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging/2.0.0": {
@@ -7588,26 +7469,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alexiy\\.nuget\\packages\\": {},
+    "C:\\Users\\Dragon\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "F:\\EShopMicroservices\\Articles.WriteSide.Service\\Articles.WriteSide.Service.csproj",
+      "projectUniqueName": "G:\\EShopMicroservices\\Articles.WriteSide.Service\\Articles.WriteSide.Service.csproj",
       "projectName": "Articles.WriteSide.Service",
-      "projectPath": "F:\\EShopMicroservices\\Articles.WriteSide.Service\\Articles.WriteSide.Service.csproj",
-      "packagesPath": "C:\\Users\\Alexiy\\.nuget\\packages\\",
-      "outputPath": "F:\\EShopMicroservices\\Articles.WriteSide.Service\\obj\\",
+      "projectPath": "G:\\EShopMicroservices\\Articles.WriteSide.Service\\Articles.WriteSide.Service.csproj",
+      "packagesPath": "C:\\Users\\Dragon\\.nuget\\packages\\",
+      "outputPath": "G:\\EShopMicroservices\\Articles.WriteSide.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alexiy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dragon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7620,17 +7498,17 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "F:\\EShopMicroservices\\Articles.WriteSide.Repository\\Articles.WriteSide.Repository.csproj": {
-              "projectPath": "F:\\EShopMicroservices\\Articles.WriteSide.Repository\\Articles.WriteSide.Repository.csproj"
+            "G:\\EShopMicroservices\\Articles.WriteSide.Aggregates\\Articles.WriteSide.Aggregates.csproj": {
+              "projectPath": "G:\\EShopMicroservices\\Articles.WriteSide.Aggregates\\Articles.WriteSide.Aggregates.csproj"
             },
-            "F:\\EShopMicroservices\\Articles.WriteSide.Aggregates\\Articles.WriteSide.Aggregates.csproj": {
-              "projectPath": "F:\\EShopMicroservices\\Articles.WriteSide.Aggregates\\Articles.WriteSide.Aggregates.csproj"
+            "G:\\EShopMicroservices\\Articles.WriteSide.Commands\\Articles.WriteSide.Commands.csproj": {
+              "projectPath": "G:\\EShopMicroservices\\Articles.WriteSide.Commands\\Articles.WriteSide.Commands.csproj"
             },
-            "F:\\EShopMicroservices\\Articles.WriteSide.Commands\\Articles.WriteSide.Commands.csproj": {
-              "projectPath": "F:\\EShopMicroservices\\Articles.WriteSide.Commands\\Articles.WriteSide.Commands.csproj"
+            "G:\\EShopMicroservices\\Articles.WriteSide.Repository\\Articles.WriteSide.Repository.csproj": {
+              "projectPath": "G:\\EShopMicroservices\\Articles.WriteSide.Repository\\Articles.WriteSide.Repository.csproj"
             },
-            "F:\\EShopMicroservices\\Utils\\Utils.csproj": {
-              "projectPath": "F:\\EShopMicroservices\\Utils\\Utils.csproj"
+            "G:\\EShopMicroservices\\Utils\\Utils.csproj": {
+              "projectPath": "G:\\EShopMicroservices\\Utils\\Utils.csproj"
             }
           }
         }

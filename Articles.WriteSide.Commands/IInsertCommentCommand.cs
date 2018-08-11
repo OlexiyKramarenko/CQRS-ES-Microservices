@@ -11,5 +11,6 @@ namespace Articles.WriteSide.Commands
 		string AddedByIp { get; set; }
 		string Body { get; set; }
 		Guid ArticleId { get; set; }
-	}
+        Guid CategoryId { get; set; }
+    }
 }

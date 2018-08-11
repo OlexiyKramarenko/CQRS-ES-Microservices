@@ -7,3 +7,12 @@ F:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Sag
 F:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.AssemblyInfo.cs
 F:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.dll
 F:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.pdb
+G:\EShopMicroservices\Articles.Saga.Events\bin\Debug\netstandard2.0\Articles.Saga.Events.deps.json
+G:\EShopMicroservices\Articles.Saga.Events\bin\Debug\netstandard2.0\Articles.Saga.Events.dll
+G:\EShopMicroservices\Articles.Saga.Events\bin\Debug\netstandard2.0\Articles.Saga.Events.pdb
+G:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.csprojAssemblyReference.cache
+G:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.csproj.CoreCompileInputs.cache
+G:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.AssemblyInfoInputs.cache
+G:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.AssemblyInfo.cs
+G:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.dll
+G:\EShopMicroservices\Articles.Saga.Events\obj\Debug\netstandard2.0\Articles.Saga.Events.pdb

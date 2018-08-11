@@ -16,16 +16,6 @@ namespace Articles.WriteSide.Service.CommandHandlers
 			Uri sendToUri = new Uri($"{RabbitMqConstants.RabbitMqUri}" + $"{RabbitMqConstants.ArticleSagaQueue}");
 			ISendEndpoint endPoint = await bus.GetSendEndpoint(sendToUri);
 			return endPoint;
-		}
-		//public ISendEndpoint EndPoint
-		//{
-		//	get
-		//	{
-		//		IBusControl bus = BusConfigurator.ConfigureBus();
-		//		Uri sendToUri = new Uri($"{RabbitMqConstants.RabbitMqUri}" + $"{RabbitMqConstants.ArticleSagaQueue}");
-		//		ISendEndpoint endPoint = bus.GetSendEndpoint(sendToUri);
-		//		return endPoint;
-		//	}
-		//}
+		}		
 	}
 }

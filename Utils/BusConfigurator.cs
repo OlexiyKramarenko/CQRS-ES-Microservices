@@ -1,6 +1,7 @@
 ﻿using MassTransit;
 using MassTransit.RabbitMqTransport;
 using System;
+using System.Threading.Tasks;
 
 namespace Utils
 {
@@ -19,5 +20,13 @@ namespace Utils
 				registrationAction?.Invoke(cfg, host);
 			});
 		}
-	}
+
+        public static async Task<ISendEndpoint> GetEndPointAsync(string destination)
+        {
+            var bus = ConfigureBus();
+            var sendToUri = new Uri($"{RabbitMqConstants.RabbitMqUri}" + destination);
+            var endPoint = await bus.GetSendEndpoint(sendToUri);
+            return endPoint;
+        }
+    }
 }

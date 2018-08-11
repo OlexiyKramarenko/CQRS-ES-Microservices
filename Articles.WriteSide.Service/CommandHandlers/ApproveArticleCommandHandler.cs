@@ -4,6 +4,7 @@ using Articles.WriteSide.Events.ToSaga.Interfaces;
 using Infrastructure.Contracts;
 using MassTransit;
 using System.Threading.Tasks;
+using Utils;
 
 namespace Articles.WriteSide.Service.CommandHandlers
 {
@@ -21,11 +22,11 @@ namespace Articles.WriteSide.Service.CommandHandlers
 
 		private async Task SendEventAsync(Article article)
 		{
-			ISendEndpoint endPoint = await GetEndPoint();
-			foreach (IEvent @event in article.GetUncommittedEvents())
+            ISendEndpoint endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleSagaQueue);
+            foreach (IEvent @event in article.GetUncommittedEvents())
 			{
-				var obj = (IArticleApprovedEvent)@event;
-				await endPoint.Send<IArticleApprovedEvent>(new
+				var obj = (ISagaArticleApprovedEvent)@event;
+				await endPoint.Send<ISagaArticleApprovedEvent>(new
 				{
 					obj.AggregateId
 				});

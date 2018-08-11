@@ -1,0 +1,20 @@
+.listing-link {
+    text-decoration: none;
+}
+
+.edit_delete_links {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.listing-item {
+    padding: 0px 10px 10px 10px;
+    border: 1px solid black;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+
+    .listing-item:hover {
+        border: 2px solid black;
+    }

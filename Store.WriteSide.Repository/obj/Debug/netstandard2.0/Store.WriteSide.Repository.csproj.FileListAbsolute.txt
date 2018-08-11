@@ -11,3 +11,17 @@ F:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.
 F:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.AssemblyInfo.cs
 F:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.dll
 F:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.pdb
+G:\EShopMicroservices\Store.WriteSide.Repository\bin\Debug\netstandard2.0\Store.WriteSide.Repository.deps.json
+G:\EShopMicroservices\Store.WriteSide.Repository\bin\Debug\netstandard2.0\Store.WriteSide.Repository.dll
+G:\EShopMicroservices\Store.WriteSide.Repository\bin\Debug\netstandard2.0\Store.WriteSide.Repository.pdb
+G:\EShopMicroservices\Store.WriteSide.Repository\bin\Debug\netstandard2.0\Infrastructure.dll
+G:\EShopMicroservices\Store.WriteSide.Repository\bin\Debug\netstandard2.0\Store.WriteSide.Events.dll
+G:\EShopMicroservices\Store.WriteSide.Repository\bin\Debug\netstandard2.0\Infrastructure.pdb
+G:\EShopMicroservices\Store.WriteSide.Repository\bin\Debug\netstandard2.0\Store.WriteSide.Events.pdb
+G:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.csprojAssemblyReference.cache
+G:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.csproj.CoreCompileInputs.cache
+G:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.AssemblyInfoInputs.cache
+G:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.AssemblyInfo.cs
+G:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.csproj.CopyComplete
+G:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.dll
+G:\EShopMicroservices\Store.WriteSide.Repository\obj\Debug\netstandard2.0\Store.WriteSide.Repository.pdb

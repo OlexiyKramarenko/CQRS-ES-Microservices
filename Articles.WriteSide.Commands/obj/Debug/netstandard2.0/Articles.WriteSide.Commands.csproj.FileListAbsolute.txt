@@ -9,3 +9,15 @@ F:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Artic
 F:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.AssemblyInfo.cs
 F:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.dll
 F:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.pdb
+G:\EShopMicroservices\Articles.WriteSide.Commands\bin\Debug\netstandard2.0\Articles.WriteSide.Commands.deps.json
+G:\EShopMicroservices\Articles.WriteSide.Commands\bin\Debug\netstandard2.0\Articles.WriteSide.Commands.dll
+G:\EShopMicroservices\Articles.WriteSide.Commands\bin\Debug\netstandard2.0\Articles.WriteSide.Commands.pdb
+G:\EShopMicroservices\Articles.WriteSide.Commands\bin\Debug\netstandard2.0\Infrastructure.dll
+G:\EShopMicroservices\Articles.WriteSide.Commands\bin\Debug\netstandard2.0\Infrastructure.pdb
+G:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.csprojAssemblyReference.cache
+G:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.csproj.CoreCompileInputs.cache
+G:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.AssemblyInfoInputs.cache
+G:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.AssemblyInfo.cs
+G:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.csproj.CopyComplete
+G:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.dll
+G:\EShopMicroservices\Articles.WriteSide.Commands\obj\Debug\netstandard2.0\Articles.WriteSide.Commands.pdb

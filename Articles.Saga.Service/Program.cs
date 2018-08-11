@@ -11,14 +11,12 @@ namespace Articles.Saga
         static void Main(string[] args)
         {
 			Console.Title = "Saga";
-			var saga = new ArticleSaga();
-			var repo = new InMemorySagaRepository<ArticleSagaState>();
-
+			  
 			var bus = BusConfigurator.ConfigureBus((cfg, host) =>
 			{
 				cfg.ReceiveEndpoint(host, RabbitMqConstants.ArticleSagaQueue, e =>
 				{
-					e.StateMachineSaga(saga, repo);
+					e.StateMachineSaga(new ArticleSaga(), new InMemorySagaRepository<ArticleSagaState>());
 				});
 			});
 			bus.Start();

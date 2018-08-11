@@ -6,9 +6,9 @@ namespace Infrastructure
 	{
 		public MessagingExceptionType Type { get; }
 		public Type SourceType { get; }
-		public string Message { get; set; }
+        public string Message { get; set; }
 
-		public MessagingException(MessagingExceptionType type,
+        public MessagingException(MessagingExceptionType type,
 										Type sourceType = null,
 										string message = null)
 		{

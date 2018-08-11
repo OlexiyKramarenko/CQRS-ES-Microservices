@@ -1,0 +1,18 @@
+#categories {
+    margin-top: 20px;
+}
+
+td {
+    padding: 5px;
+}
+
+.category-item {
+    padding: 15px;
+    display: inline-block;
+    border: 3px solid #5aaeb1;
+    width: 300px;
+    height: 120px;
+    vertical-align: top;
+    margin-bottom: 4px;
+    border-radius: 10px;
+}

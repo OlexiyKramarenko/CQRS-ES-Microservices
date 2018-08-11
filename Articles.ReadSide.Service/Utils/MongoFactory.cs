@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 
 namespace Articles.ReadSide.Service.Utils
 {
@@ -11,7 +10,6 @@ namespace Articles.ReadSide.Service.Utils
 			var client = new MongoClient(connectionString);
 			var database = client.GetDatabase(name);
 			return database;
-		}
-		
+		}		
 	}
 }

@@ -33,7 +33,7 @@ namespace Articles.WriteSide.Service
 					//e.Consumer<UpdateCategoryCommandHandler>();
 					//e.Consumer<UpdateCommentCommandHandler>();
 
-					e.Consumer<InsertCommentCancelCommandHandler>();
+					e.Consumer<CancelCommandHandler>();
 				}); 
 			});
 

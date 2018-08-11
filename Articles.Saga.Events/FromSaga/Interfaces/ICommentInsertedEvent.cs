@@ -10,5 +10,6 @@ namespace Articles.Saga.Events.Interfaces
 		string AddedByIp { get; }
 		string Body { get; }
 		Guid ArticleId { get; }
-	}
+        Guid CategoryId { get; }
+    }
 }

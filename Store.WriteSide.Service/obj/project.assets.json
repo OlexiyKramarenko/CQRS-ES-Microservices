@@ -6148,26 +6148,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alexiy\\.nuget\\packages\\": {},
+    "C:\\Users\\Dragon\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "F:\\EShopMicroservices\\Store.WriteSide.Service\\Store.WriteSide.Service.csproj",
+      "projectUniqueName": "G:\\EShopMicroservices\\Store.WriteSide.Service\\Store.WriteSide.Service.csproj",
       "projectName": "Store.WriteSide.Service",
-      "projectPath": "F:\\EShopMicroservices\\Store.WriteSide.Service\\Store.WriteSide.Service.csproj",
-      "packagesPath": "C:\\Users\\Alexiy\\.nuget\\packages\\",
-      "outputPath": "F:\\EShopMicroservices\\Store.WriteSide.Service\\obj\\",
+      "projectPath": "G:\\EShopMicroservices\\Store.WriteSide.Service\\Store.WriteSide.Service.csproj",
+      "packagesPath": "C:\\Users\\Dragon\\.nuget\\packages\\",
+      "outputPath": "G:\\EShopMicroservices\\Store.WriteSide.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alexiy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dragon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6180,11 +6177,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "F:\\EShopMicroservices\\Store.WriteSide.Commands\\Store.WriteSide.Commands.csproj": {
-              "projectPath": "F:\\EShopMicroservices\\Store.WriteSide.Commands\\Store.WriteSide.Commands.csproj"
+            "G:\\EShopMicroservices\\Store.WriteSide.Aggregates\\Store.WriteSide.Aggregates.csproj": {
+              "projectPath": "G:\\EShopMicroservices\\Store.WriteSide.Aggregates\\Store.WriteSide.Aggregates.csproj"
             },
-            "F:\\EShopMicroservices\\Store.WriteSide.Aggregates\\Store.WriteSide.Aggregates.csproj": {
-              "projectPath": "F:\\EShopMicroservices\\Store.WriteSide.Aggregates\\Store.WriteSide.Aggregates.csproj"
+            "G:\\EShopMicroservices\\Store.WriteSide.Commands\\Store.WriteSide.Commands.csproj": {
+              "projectPath": "G:\\EShopMicroservices\\Store.WriteSide.Commands\\Store.WriteSide.Commands.csproj"
             }
           }
         }

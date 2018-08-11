@@ -7,9 +7,9 @@ namespace Articles.WriteSide.Aggregates
 {
 	public class Comment :
 		AggregateRoot,
-		IHandle<CommentDeletedEvent>,
+		IHandle<SagaCommentDeletedEvent>,
 		IHandle<SagaCommentInsertedEvent>,
-		IHandle<CommentUpdatedEvent>
+		IHandle<SagaCommentUpdatedEvent>
 	{
 		public DateTime AddedDate { get; set; }
 		public string AddedBy { get; set; }
@@ -47,7 +47,7 @@ namespace Articles.WriteSide.Aggregates
 
 		public void Delete()
 		{
-			var @event = new CommentDeletedEvent
+			var @event = new SagaCommentDeletedEvent
 			{
 				AggregateId = Id
 			};
@@ -56,7 +56,7 @@ namespace Articles.WriteSide.Aggregates
 
 		public void Update()
 		{
-			var @event = new CommentUpdatedEvent
+			var @event = new SagaCommentUpdatedEvent
 			{
 				AggregateId = Id,
 				Body = Body
@@ -64,7 +64,7 @@ namespace Articles.WriteSide.Aggregates
 			ApplyChange(@event);
 		}
 
-		public void Handle(CommentDeletedEvent @event)
+		public void Handle(SagaCommentDeletedEvent @event)
 		{
 			Id = @event.AggregateId;
 		}
@@ -80,7 +80,7 @@ namespace Articles.WriteSide.Aggregates
 			Body = @event.Body;
 		}
 
-		public void Handle(CommentUpdatedEvent @event)
+		public void Handle(SagaCommentUpdatedEvent @event)
 		{
 			Id = @event.AggregateId;
 			Body = @event.Body;

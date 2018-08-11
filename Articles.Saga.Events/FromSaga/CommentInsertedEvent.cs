@@ -19,6 +19,7 @@ namespace Articles.Saga.Events
 		public string AddedByIp => sagaState.AddedByIp;
 		public string Body => sagaState.Body;
 		public Guid ArticleId => sagaState.ArticleId;
-		public Guid AggregateId => sagaState.AggregateId;
+        public Guid CategoryId => sagaState.CategoryId;
+        public Guid AggregateId => sagaState.AggregateId;
 	}
 }

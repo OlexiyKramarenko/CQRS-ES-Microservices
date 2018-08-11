@@ -25,19 +25,43 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.WriteSide.Repository"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.WriteSide.Service", "Store.WriteSide.Service\Store.WriteSide.Service.csproj", "{2F554F4B-D63E-4A5A-A4FA-7FAD52BC1AD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{7FD10624-3590-43B3-90C7-FF04DF30B7F7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{CA32A059-7D6B-48A6-9973-9DBD7AA55592}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Web\Server.csproj", "{CA32A059-7D6B-48A6-9973-9DBD7AA55592}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.ReadSide.Repository", "Articles.ReadSide.Repository\Articles.ReadSide.Repository.csproj", "{75D48CA5-343F-4D45-AE85-0A6838B9A171}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.ReadSide.Service", "Articles.ReadSide.Service\Articles.ReadSide.Service.csproj", "{0D91116E-D958-4E04-9010-326A50F422B9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.Saga.Events", "Articles.Saga.Events\Articles.Saga.Events.csproj", "{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.Saga.Service", "Articles.Saga.Service\Articles.Saga.Service.csproj", "{42F4C583-599E-443C-973E-0DD184BF6196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.ReactJS", "Client.ReactJS\Client.ReactJS.csproj", "{0229F276-A4DB-483B-9220-BF3210B25222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Client.ReactJS", "Web.Client.ReactJS\Web.Client.ReactJS.csproj", "{7AB34CE0-600A-45FE-B363-C2E5E9CF0434}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client.ReactJS(3)", "Client.ReactJS\", "{31059A4C-5A50-42AB-8FDD-65E78CCC1576}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56062"
+		Debug.AspNetCompiler.PhysicalPath = "Client.ReactJS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56062\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56062"
+		Release.AspNetCompiler.PhysicalPath = "Client.ReactJS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56062\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56062"
+		SlnRelativePath = "Client.ReactJS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles.ReadSide.Service", "Articles.ReadSide.Service\Articles.ReadSide.Service.csproj", "{93B1B369-CC3F-4588-99E8-1B2ACC31ACBB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{9909C0E9-4831-4F43-A9C3-048C37CB8662}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles.ReadSide.WCF.Service", "Articles.ReadSide.WCF.Service\Articles.ReadSide.WCF.Service.csproj", "{B2117E37-6A62-4F24-AEF6-F48766BE88AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,10 +113,6 @@ Global
 		{2F554F4B-D63E-4A5A-A4FA-7FAD52BC1AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F554F4B-D63E-4A5A-A4FA-7FAD52BC1AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F554F4B-D63E-4A5A-A4FA-7FAD52BC1AD1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7FD10624-3590-43B3-90C7-FF04DF30B7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FD10624-3590-43B3-90C7-FF04DF30B7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FD10624-3590-43B3-90C7-FF04DF30B7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FD10624-3590-43B3-90C7-FF04DF30B7F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA32A059-7D6B-48A6-9973-9DBD7AA55592}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -101,10 +121,6 @@ Global
 		{75D48CA5-343F-4D45-AE85-0A6838B9A171}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75D48CA5-343F-4D45-AE85-0A6838B9A171}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75D48CA5-343F-4D45-AE85-0A6838B9A171}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D91116E-D958-4E04-9010-326A50F422B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D91116E-D958-4E04-9010-326A50F422B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D91116E-D958-4E04-9010-326A50F422B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D91116E-D958-4E04-9010-326A50F422B9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FC1CE79-19D2-46D8-86F8-A466FBFCFAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -113,10 +129,26 @@ Global
 		{42F4C583-599E-443C-973E-0DD184BF6196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42F4C583-599E-443C-973E-0DD184BF6196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42F4C583-599E-443C-973E-0DD184BF6196}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0229F276-A4DB-483B-9220-BF3210B25222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0229F276-A4DB-483B-9220-BF3210B25222}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0229F276-A4DB-483B-9220-BF3210B25222}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0229F276-A4DB-483B-9220-BF3210B25222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB34CE0-600A-45FE-B363-C2E5E9CF0434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB34CE0-600A-45FE-B363-C2E5E9CF0434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB34CE0-600A-45FE-B363-C2E5E9CF0434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB34CE0-600A-45FE-B363-C2E5E9CF0434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31059A4C-5A50-42AB-8FDD-65E78CCC1576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31059A4C-5A50-42AB-8FDD-65E78CCC1576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31059A4C-5A50-42AB-8FDD-65E78CCC1576}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{31059A4C-5A50-42AB-8FDD-65E78CCC1576}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{93B1B369-CC3F-4588-99E8-1B2ACC31ACBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B1B369-CC3F-4588-99E8-1B2ACC31ACBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B1B369-CC3F-4588-99E8-1B2ACC31ACBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B1B369-CC3F-4588-99E8-1B2ACC31ACBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9909C0E9-4831-4F43-A9C3-048C37CB8662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9909C0E9-4831-4F43-A9C3-048C37CB8662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9909C0E9-4831-4F43-A9C3-048C37CB8662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9909C0E9-4831-4F43-A9C3-048C37CB8662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2117E37-6A62-4F24-AEF6-F48766BE88AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2117E37-6A62-4F24-AEF6-F48766BE88AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2117E37-6A62-4F24-AEF6-F48766BE88AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2117E37-6A62-4F24-AEF6-F48766BE88AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

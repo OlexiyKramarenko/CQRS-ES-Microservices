@@ -7,3 +7,12 @@ F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.Ass
 F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfo.cs
 F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.dll
 F:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.pdb
+G:\EShopMicroservices\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.deps.json
+G:\EShopMicroservices\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.dll
+G:\EShopMicroservices\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.pdb
+G:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csprojAssemblyReference.cache
+G:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CoreCompileInputs.cache
+G:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfoInputs.cache
+G:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfo.cs
+G:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.dll
+G:\EShopMicroservices\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.pdb

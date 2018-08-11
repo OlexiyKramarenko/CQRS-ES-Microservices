@@ -11,5 +11,6 @@ namespace Articles.WriteSide.Events.ToSaga.Interfaces
 		string AddedByIp { get; }
 		string Body { get; }
 		Guid ArticleId { get; }
-	}
+        Guid CategoryId { get; }
+    }
 }

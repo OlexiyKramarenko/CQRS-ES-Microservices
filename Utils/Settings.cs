@@ -13,12 +13,13 @@ namespace Utils
 
 		public string GetConnectionString(string name)
 		{
-			var builder = new ConfigurationBuilder()
-				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile(_filename, optional: true, reloadOnChange: true);
+            //var builder = new ConfigurationBuilder()
+            //	.SetBasePath(Directory.GetCurrentDirectory())
+            //	.AddJsonFile(_filename, optional: true, reloadOnChange: true);
 
-			IConfigurationRoot configuration = builder.Build();
-			return configuration.GetConnectionString(name);
+            //IConfigurationRoot configuration = builder.Build();
+            //return configuration.GetConnectionString(name);
+            return null;
 		}
 	}
 }

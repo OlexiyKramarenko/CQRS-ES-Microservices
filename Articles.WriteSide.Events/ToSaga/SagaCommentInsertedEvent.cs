@@ -11,6 +11,7 @@ namespace Articles.WriteSide.Events.ToSaga
 		public string AddedByEmail { get; set; }
 		public string AddedByIp { get; set; }
 		public string Body { get; set; }
-		public Guid ArticleId { get; set; } 
-	}
+		public Guid ArticleId { get; set; }
+        public Guid CategoryId { get; set; }
+    }
 }

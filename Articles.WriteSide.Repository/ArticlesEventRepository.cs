@@ -67,7 +67,7 @@ namespace Articles.WriteSide.Repository
 
 			var aggregate = new TAggregate();
 			
-			IEnumerable<IEvent> events = eventEntities.AsAggregateEvents(typeof(ArticleApprovedEvent).Assembly);
+			IEnumerable<IEvent> events = eventEntities.AsAggregateEvents(typeof(SagaArticleApprovedEvent).Assembly);
 			
 			aggregate.LoadFromHistory(events);
 

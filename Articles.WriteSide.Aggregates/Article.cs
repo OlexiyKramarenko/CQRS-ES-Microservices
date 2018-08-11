@@ -9,12 +9,12 @@ namespace Articles.WriteSide.Aggregates
 {
 	public class Article :
 		AggregateRoot,
-		IHandle<ArticleApprovedEvent>,
-		IHandle<ArticleDeletedEvent>,
-		IHandle<ArticleInsertedEvent>,
-		IHandle<ArticleRatedEvent>,
-		IHandle<ArticleUpdatedCommand>,
-		IHandle<ArticleViewCountIncrementedEvent>
+		IHandle<SagaArticleApprovedEvent>,
+		IHandle<SagaArticleDeletedEvent>,
+		IHandle<SagaArticleInsertedEvent>,
+		IHandle<SagaArticleRatedEvent>,
+		IHandle<SagaArticleUpdatedEvent>,
+		IHandle<SagaArticleViewCountIncrementedEvent>
 	{
 		public DateTime AddedDate { get; set; }
 		public string AddedBy { get; set; }
@@ -62,7 +62,7 @@ namespace Articles.WriteSide.Aggregates
 			int votes,
 			int totalRating)
 		{
-			var @event = new ArticleInsertedEvent
+			var @event = new SagaArticleInsertedEvent
 			{
 				AggregateId = id,
 				AddedDate = addedDate,
@@ -102,7 +102,7 @@ namespace Articles.WriteSide.Aggregates
 			bool commentsEnabled,
 			bool onlyForMembers)
 		{
-			var @event = new ArticleUpdatedCommand
+			var @event = new SagaArticleUpdatedEvent
 			{
 				AggregateId = Id,
 				Abstract = @abstract,
@@ -124,7 +124,7 @@ namespace Articles.WriteSide.Aggregates
 
 		public void Delete()
 		{
-			var @event = new ArticleDeletedEvent
+			var @event = new SagaArticleDeletedEvent
 			{
 				AggregateId = Id
 			};
@@ -133,7 +133,7 @@ namespace Articles.WriteSide.Aggregates
 
 		public void RateArticle(int rating)
 		{
-			var @event = new ArticleRatedEvent
+			var @event = new SagaArticleRatedEvent
 			{
 				AggregateId = Id,
 				Rating = rating
@@ -143,7 +143,7 @@ namespace Articles.WriteSide.Aggregates
 
 		public void IncrementArticleViewCount()
 		{
-			var @event = new ArticleViewCountIncrementedEvent
+			var @event = new SagaArticleViewCountIncrementedEvent
 			{
 				AggregateId = Id
 			};
@@ -152,26 +152,24 @@ namespace Articles.WriteSide.Aggregates
 
 		public void Approve()
 		{
-			var @event = new ArticleApprovedEvent
+			var @event = new SagaArticleApprovedEvent
 			{
 				AggregateId = Id
 			};
 			ApplyChange(@event);
 		}
 
-
-
-		public void Handle(ArticleApprovedEvent @event)
+		public void Handle(SagaArticleApprovedEvent @event)
 		{
 			Id = @event.AggregateId;
 		}
 
-		public void Handle(ArticleDeletedEvent @event)
+		public void Handle(SagaArticleDeletedEvent @event)
 		{
 			Id = @event.AggregateId;
 		}
 
-		public void Handle(ArticleInsertedEvent @event)
+		public void Handle(SagaArticleInsertedEvent @event)
 		{
 			Abstract = @event.Abstract;
 			AddedBy = @event.AddedBy;
@@ -194,13 +192,13 @@ namespace Articles.WriteSide.Aggregates
 			Votes = @event.Votes;
 		}
 
-		public void Handle(ArticleRatedEvent @event)
+		public void Handle(SagaArticleRatedEvent @event)
 		{
 			Id = @event.AggregateId;
 			Rating = @event.Rating;
 		}
 
-		public void Handle(ArticleUpdatedCommand @event)
+		public void Handle(SagaArticleUpdatedEvent @event)
 		{
 			Abstract = @event.Abstract;
 			Id = @event.AggregateId;
@@ -218,14 +216,14 @@ namespace Articles.WriteSide.Aggregates
 			Title = @event.Title;
 		}
 
-		public void Handle(ArticleViewCountIncrementedEvent @event)
+		public void Handle(SagaArticleViewCountIncrementedEvent @event)
 		{
 			Id = @event.AggregateId;
 		}
 
-		public void Handle(IInsertCommentCancelCommand @event)
-		{
-			
-		}
+		//public void Handle(IInsertCommentCancelCommand @event)
+		//{
+  //          Id = @event.AggregateId;
+  //      }
 	}
 }
