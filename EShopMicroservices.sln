@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Articles.Saga.Service", "Ar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Client.ReactJS", "Web.Client.ReactJS\Web.Client.ReactJS.csproj", "{7AB34CE0-600A-45FE-B363-C2E5E9CF0434}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client.ReactJS(3)", "Client.ReactJS\", "{31059A4C-5A50-42AB-8FDD-65E78CCC1576}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client.ReactJS", "Client.ReactJS\", "{31059A4C-5A50-42AB-8FDD-65E78CCC1576}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_56062"

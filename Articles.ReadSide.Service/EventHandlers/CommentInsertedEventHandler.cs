@@ -10,9 +10,9 @@ using Utils;
 
 namespace Articles.ReadSide.Service.EventHandlers
 {
-    public class CommentInsertedEventHandler : IConsumer<ICommentInsertedEvent>
+    public class CommentInsertedEventHandler : IConsumer<IInsertCommentEvent>
     {
-        public async Task Consume(ConsumeContext<ICommentInsertedEvent> context)
+        public async Task Consume(ConsumeContext<IInsertCommentEvent> context)
         {
             try
             {
@@ -36,17 +36,17 @@ namespace Articles.ReadSide.Service.EventHandlers
             {
                 var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleSagaQueue);
 
-                await endPoint.Send<ISagaFailedCommentInsertedEvent>(new
+                await endPoint.Send<ISagaFailedEvent>(new
                 {
                     CorrelationId = context.ConversationId,
                     Data =
-                    $"Event : {nameof(ICommentInsertedEvent)}, " +
-                    $"{nameof(ICommentInsertedEvent.AddedBy)} : { context.Message.AddedBy }, " +
-                    $"{nameof(ICommentInsertedEvent.AddedByEmail)} : { context.Message.AddedByEmail }, " +
-                    $"{nameof(ICommentInsertedEvent.AddedByIp)} : { context.Message.AddedByIp }, " +
-                    $"{nameof(ICommentInsertedEvent.AddedDate)} : { context.Message.AddedDate }, " +
-                    $"{nameof(ICommentInsertedEvent.ArticleId)} : { context.Message.ArticleId }, " +
-                    $"{nameof(ICommentInsertedEvent.Body)} : { context.Message.Body }"
+                    $"Event : {nameof(IInsertCommentEvent)}, " +
+                    $"{nameof(IInsertCommentEvent.AddedBy)} : { context.Message.AddedBy }, " +
+                    $"{nameof(IInsertCommentEvent.AddedByEmail)} : { context.Message.AddedByEmail }, " +
+                    $"{nameof(IInsertCommentEvent.AddedByIp)} : { context.Message.AddedByIp }, " +
+                    $"{nameof(IInsertCommentEvent.AddedDate)} : { context.Message.AddedDate }, " +
+                    $"{nameof(IInsertCommentEvent.ArticleId)} : { context.Message.ArticleId }, " +
+                    $"{nameof(IInsertCommentEvent.Body)} : { context.Message.Body }"
                 });
             }
         }
