@@ -1,0 +1,1 @@
+﻿const SERVICE_BASE = "http://localhost:64510";
