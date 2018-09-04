@@ -1,7 +1,0 @@
-G:\EShopMicroservices\Articles.ReadSide.WCF\bin\Debug\Articles.ReadSide.WCF.dll
-G:\EShopMicroservices\Articles.ReadSide.WCF\bin\Debug\Articles.ReadSide.WCF.pdb
-G:\EShopMicroservices\Articles.ReadSide.WCF\obj\Debug\Articles.ReadSide.WCF.csprojResolveAssemblyReference.cache
-G:\EShopMicroservices\Articles.ReadSide.WCF\obj\Debug\Articles.ReadSide.WCF.csproj.CoreCompileInputs.cache
-G:\EShopMicroservices\Articles.ReadSide.WCF\obj\Debug\Articles.ReadSide.WCF.dll
-G:\EShopMicroservices\Articles.ReadSide.WCF\obj\Debug\Articles.ReadSide.WCF.pdb
-G:\EShopMicroservices\Articles.ReadSide.WCF\bin\Debug\Articles.ReadSide.WCF.dll.config
