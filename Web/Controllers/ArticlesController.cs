@@ -26,75 +26,22 @@ namespace Web.Controllers
         {
             ArticleDto[] dto = _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 20).Result;
             var model = _mapper.Map<BrowseArticlesViewModel[]>(dto);
-            return Ok(model);
-
-            //var list = new List<BrowseArticlesViewModel>
-            //{
-            //    new BrowseArticlesViewModel
-            //    {
-            //         CategoryId = Guid.NewGuid(),
-            //         PageIndex = 1,
-            //         PageSize = 1
-            //    }
-            //};
+            return Ok(model); 
         }
 
         [HttpGet]
         public IActionResult ShowArticle(Guid id)
         {
             ArticleDto dto = _articlesService.GetArticleByIdAsync(id).Result;
-            var model = _mapper.Map<ShowArticleViewModel>(dto);
-            //var model = new ShowArticleViewModel
-            //{
-            //    Text = "Text...",
-            //    Title = "title",
-            //    PostComment = new CommentDetailsViewModel
-            //    {
-            //        AddedBy = "A",
-            //        AddedByEmail = "gmail.com",
-            //        ArticleId = Guid.NewGuid(),
-            //        Body = "sdfdsgf"
-            //    }
-            //};
+            var model = _mapper.Map<ShowArticleViewModel>(dto); 
             return Ok(model);
         }
-
-        //IQueryHandler<ShowCategoriesQuery, List<Category>> _showCategoriesQueryHandler;
-
+         
         [HttpGet]
         public IActionResult ShowCategories()
         { 
             CategoryDto[] dto = _articlesService.GetCategoriesAsync().Result;
-            var model = _mapper.Map<CategoryItemViewModel[]>(dto);
-          
-            //var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticlesReadSideServiceQueue);
-
-            //Task sendTask = endPoint.Send<IShowCategoriesQuery>(new { Message = "123" });
- 
-            //List<Category> categories = _showCategoriesQueryHandler.Handle(query);
-
-            //var list = new List<CategoryItemViewModel>
-            //    {
-            //        new CategoryItemViewModel
-            //        {
-            //             Id = Guid.NewGuid(),
-            //             Title = "title 1",
-            //             Description ="aaaaaaa_aaaaa"
-            //        },
-            //        new CategoryItemViewModel
-            //        {
-            //             Id = Guid.NewGuid(),
-            //             Title = "title 1",
-            //             Description ="bbbbb_bbbbb"
-            //        },
-            //        new CategoryItemViewModel
-            //        {
-            //             Id = Guid.NewGuid(),
-            //             Title = "title 1",
-            //             Description ="cccc_ccccc"
-            //        }
-            //    };
-
+            var model = _mapper.Map<CategoryItemViewModel[]>(dto); 
             return Ok(model);
 
         }

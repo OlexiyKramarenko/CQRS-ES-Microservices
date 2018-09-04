@@ -32,30 +32,7 @@ namespace Web.Controllers
         {
             ArticleDto[] dto = _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 10).Result;
             var model = _mapper.Map<ArticleItemViewModel[]>(dto);
-            return Ok(model);
-
-            //var list = new List<ArticleItemViewModel>
-            //{
-            //    new ArticleItemViewModel
-            //    {
-            //         Abstract = "AAA", AddedBy = "Oleg", Approved = true, CategoryTitle = "title",
-            //         Id = Guid.NewGuid(), Location ="USA", OnlyForMembers = true, ReleaseDate = DateTime.Now,
-            //         Title = "AA", ViewCount = 5, Votes = 10, CategoryId = categoryId
-            //    },
-            //    new ArticleItemViewModel
-            //    {
-            //         Abstract = "AAA", AddedBy = "Oleg", Approved = true, CategoryTitle = "title",
-            //         Id = Guid.NewGuid(), Location ="USA", OnlyForMembers = true, ReleaseDate = DateTime.Now,
-            //         Title = "AA", ViewCount = 5, Votes = 10, CategoryId = categoryId
-            //    },
-            //    new ArticleItemViewModel
-            //    {
-            //         Abstract = "AAA", AddedBy = "Oleg", Approved = true, CategoryTitle = "title",
-            //         Id = Guid.NewGuid(), Location ="USA", OnlyForMembers = true, ReleaseDate = DateTime.Now,
-            //         Title = "AA", ViewCount = 5, Votes = 10, CategoryId = categoryId
-            //    },
-            //};
-            //return Ok(list);
+            return Ok(model); 
         }
 
         [HttpGet]
@@ -80,30 +57,10 @@ namespace Web.Controllers
         {
             ArticleDto dto = _articlesService.GetArticleByIdAsync(id).Result;
             var model = _mapper.Map<EditArticleViewModel>(dto);
-            return Ok(model);
-
-            //var model = new EditArticleViewModel
-            //{
-            //    //Abstract = "abstrt",
-            //    //Votes = 5,
-            //    //ViewCount = 5,
-            //    //Title = "D",
-            //    //AddedBy = "Oleg",
-            //    //AddedDate = DateTime.Now,
-            //    //Approved = true,
-            //    //AverageRating = 4,
-            //    Body = "sd",
-            //    Id = id
-            //};
-            //return Ok(model);
+            return Ok(model); 
         }
-
-        //[HttpPost]//EditArticleViewModel
-        //public IActionResult UpdateArticle(EditArticleViewModel model)
-        //{
-        //    return Ok();
-        //}
-        [HttpPut("{id}")]//EditArticleViewModel
+         
+        [HttpPut("{id}")] 
         public async Task<IActionResult> UpdateArticle(Guid id, [FromBody]EditArticleViewModel model)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
@@ -122,13 +79,7 @@ namespace Web.Controllers
         {
             CategoryDto[] dto = _articlesService.GetCategoriesAsync().Result;
             CategoryItemViewModel[] model = _mapper.Map<CategoryItemViewModel[]>(dto);
-            return Ok(model);
-
-            //var list = new List<CategoryItemViewModel>
-            //{
-            //    new CategoryItemViewModel{ Id = Guid.NewGuid(), Title = "aa", Description ="aaaaa"}
-            //};
-            //return Ok(list);
+            return Ok(model); 
         }
 
         [HttpGet]
@@ -162,16 +113,6 @@ namespace Web.Controllers
             CategoryDto dto = _articlesService.GetCategoryByIdAsync(id).Result;
             var model = _mapper.Map<EditCategoryViewModel>(dto);
             return Ok(model);
-
-
-            //var model = new EditCategoryViewModel
-            //{
-            //    Description = "ddd",
-            //    Id = Guid.NewGuid(),
-            //    Importance = "5555",
-            //    Title = "ttt"
-            //};
-            //return Ok(model);
         }
 
         [HttpPut("{id}")]
@@ -198,20 +139,7 @@ namespace Web.Controllers
         {
             CommentDto[] dto = _articlesService.GetCommentsByArticleIdAsync(articleId, 1, 20).Result;
             var model = _mapper.Map<ManageCommentItemViewModel[]>(dto);
-            return Ok(model);
-
-            //var list = new List<ManageCommentItemViewModel>
-            //{
-            //    new ManageCommentItemViewModel
-            //    {
-            //         Id = Guid.NewGuid(),
-            //         AddedBy = "AAA",
-            //         AddedByEmail ="BBB",
-            //         ArticleTitle = "AAA FF",
-            //         Body = "eeeeee eeeee"
-            //    }
-            //};
-            //return Ok(list);
+            return Ok(model); 
         }
 
         [HttpGet]
@@ -230,16 +158,7 @@ namespace Web.Controllers
         {
             CommentDto dto = _articlesService.GetCommentByIdAsync(id).Result;
             var model = _mapper.Map<EditCommentViewModel>(dto);
-            return Ok(model);
-
-            //var model = new EditCommentViewModel
-            //{
-            //    Id = Guid.NewGuid(),
-            //    AddedBy = "aaaa ",
-            //    Comment = "vvvvvvvv vvvvvv",
-            //    UserIp = ":1"
-            //};
-            //return Ok(model);
+            return Ok(model); 
         }
 
         [HttpPut("{id}")]
