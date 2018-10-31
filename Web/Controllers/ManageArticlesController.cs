@@ -1,11 +1,9 @@
 ﻿
 using Articles.WriteSide.Commands;
 using AutoMapper;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using ServiceReference1;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Utils;
 using Web.Models.Articles;
@@ -28,11 +26,11 @@ namespace Web.Controllers
         #region Articles
 
         [HttpGet("{categoryId}")]
-        public IActionResult ManageArticles(Guid categoryId)
+        public async Task<IActionResult> ManageArticles(Guid categoryId)
         {
-            ArticleDto[] dto = _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 10).Result;
+            ArticleDto[] dto = await _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 10);
             var model = _mapper.Map<ArticleItemViewModel[]>(dto);
-            return Ok(model); 
+            return Ok(model);
         }
 
         [HttpGet]
@@ -53,14 +51,14 @@ namespace Web.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult EditArticle(Guid id)
+        public async Task<IActionResult> EditArticle(Guid id)
         {
-            ArticleDto dto = _articlesService.GetArticleByIdAsync(id).Result;
+            ArticleDto dto = await _articlesService.GetArticleByIdAsync(id);
             var model = _mapper.Map<EditArticleViewModel>(dto);
-            return Ok(model); 
+            return Ok(model);
         }
-         
-        [HttpPut("{id}")] 
+
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateArticle(Guid id, [FromBody]EditArticleViewModel model)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
@@ -75,11 +73,11 @@ namespace Web.Controllers
 
         #region Categories
         [HttpGet]
-        public IActionResult ManageCategories()
+        public async Task<IActionResult> ManageCategories()
         {
-            CategoryDto[] dto = _articlesService.GetCategoriesAsync().Result;
+            CategoryDto[] dto = await _articlesService.GetCategoriesAsync();
             CategoryItemViewModel[] model = _mapper.Map<CategoryItemViewModel[]>(dto);
-            return Ok(model); 
+            return Ok(model);
         }
 
         [HttpGet]
@@ -108,9 +106,9 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult EditCategory(Guid id)
+        public async Task<IActionResult> EditCategory(Guid id)
         {
-            CategoryDto dto = _articlesService.GetCategoryByIdAsync(id).Result;
+            CategoryDto dto = await _articlesService.GetCategoryByIdAsync(id);
             var model = _mapper.Map<EditCategoryViewModel>(dto);
             return Ok(model);
         }
@@ -135,11 +133,11 @@ namespace Web.Controllers
         #region Comments
 
         [HttpGet("{articleId}")]
-        public IActionResult ManageComments(Guid articleId)
+        public async Task<IActionResult> ManageComments(Guid articleId)
         {
-            CommentDto[] dto = _articlesService.GetCommentsByArticleIdAsync(articleId, 1, 20).Result;
+            CommentDto[] dto = await _articlesService.GetCommentsByArticleIdAsync(articleId, 1, 20);
             var model = _mapper.Map<ManageCommentItemViewModel[]>(dto);
-            return Ok(model); 
+            return Ok(model);
         }
 
         [HttpGet]
@@ -154,11 +152,11 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult EditComment(Guid id)
+        public async Task<IActionResult> EditComment(Guid id)
         {
-            CommentDto dto = _articlesService.GetCommentByIdAsync(id).Result;
+            CommentDto dto = await _articlesService.GetCommentByIdAsync(id);
             var model = _mapper.Map<EditCommentViewModel>(dto);
-            return Ok(model); 
+            return Ok(model);
         }
 
         [HttpPut("{id}")]

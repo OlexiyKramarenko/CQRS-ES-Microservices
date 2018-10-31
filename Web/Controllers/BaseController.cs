@@ -15,17 +15,5 @@ namespace Server.Controllers
             var endPoint = await bus.GetSendEndpoint(sendToUri);
             return endPoint;
         }
-
-        ////private ISendEndpoint _endPoint;
-        ////public ISendEndpoint EndPoint
-        ////{
-        ////    get
-        ////    {
-        ////        if (_endPoint == null)
-        ////            _endPoint = (ISendEndpoint)GetEndPointAsync();
-
-        ////        return _endPoint;
-        ////    }
-        ////}
     }
 }

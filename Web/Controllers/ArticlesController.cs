@@ -22,26 +22,26 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult BrowseArticles(Guid categoryId)
+        public async Task<IActionResult> BrowseArticles(Guid categoryId)
         {
-            ArticleDto[] dto = _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 20).Result;
+            ArticleDto[] dto = await _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 20);
             var model = _mapper.Map<BrowseArticlesViewModel[]>(dto);
-            return Ok(model); 
+            return Ok(model);
         }
 
         [HttpGet]
-        public IActionResult ShowArticle(Guid id)
+        public async Task<IActionResult> ShowArticle(Guid id)
         {
-            ArticleDto dto = _articlesService.GetArticleByIdAsync(id).Result;
-            var model = _mapper.Map<ShowArticleViewModel>(dto); 
+            ArticleDto dto = await _articlesService.GetArticleByIdAsync(id);
+            var model = _mapper.Map<ShowArticleViewModel>(dto);
             return Ok(model);
         }
-         
+
         [HttpGet]
-        public IActionResult ShowCategories()
-        { 
-            CategoryDto[] dto = _articlesService.GetCategoriesAsync().Result;
-            var model = _mapper.Map<CategoryItemViewModel[]>(dto); 
+        public async Task<IActionResult> ShowCategories()
+        {
+            CategoryDto[] dto = await _articlesService.GetCategoriesAsync();
+            var model = _mapper.Map<CategoryItemViewModel[]>(dto);
             return Ok(model);
 
         }
