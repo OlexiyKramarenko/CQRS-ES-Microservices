@@ -1,6 +1,3 @@
-G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.csprojAssemblyReference.cache
-G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.exe.config
-G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.csproj.CoreCompileInputs.cache
 G:\EShopMicroservices\Articles.ReadSide.Service\bin\Debug\Articles.ReadSide.Service.exe.config
 G:\EShopMicroservices\Articles.ReadSide.Service\bin\Debug\Articles.ReadSide.Service.exe
 G:\EShopMicroservices\Articles.ReadSide.Service\bin\Debug\Articles.ReadSide.Service.pdb
@@ -145,6 +142,9 @@ G:\EShopMicroservices\Articles.ReadSide.Service\bin\Debug\Articles.WriteSide.Rep
 G:\EShopMicroservices\Articles.ReadSide.Service\bin\Debug\Store.WriteSide.Repository.pdb
 G:\EShopMicroservices\Articles.ReadSide.Service\bin\Debug\Articles.WriteSide.Events.pdb
 G:\EShopMicroservices\Articles.ReadSide.Service\bin\Debug\Store.WriteSide.Events.pdb
+G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.csprojAssemblyReference.cache
+G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.exe.config
+G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.csproj.CoreCompileInputs.cache
 G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.csproj.CopyComplete
 G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.exe
 G:\EShopMicroservices\Articles.ReadSide.Service\obj\Debug\Articles.ReadSide.Service.pdb

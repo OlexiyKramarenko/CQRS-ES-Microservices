@@ -1,7 +1,3 @@
-G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.csprojAssemblyReference.cache
-G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.csproj.CoreCompileInputs.cache
-G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.AssemblyInfoInputs.cache
-G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.AssemblyInfo.cs
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Server.deps.json
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Server.runtimeconfig.json
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Server.runtimeconfig.dev.json
@@ -23,6 +19,10 @@ G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Articles.WriteSide.Events.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Store.WriteSide.Events.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Articles.WriteSide.Repository.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Store.WriteSide.Repository.pdb
+G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.csprojAssemblyReference.cache
+G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.csproj.CoreCompileInputs.cache
+G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.AssemblyInfoInputs.cache
+G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.AssemblyInfo.cs
 G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.csproj.CopyComplete
 G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.dll
 G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.pdb

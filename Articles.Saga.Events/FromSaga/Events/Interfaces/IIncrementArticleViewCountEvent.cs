@@ -4,6 +4,6 @@ namespace Articles.Saga.Events.FromSaga.Events.Interfaces
 {
     public interface IIncrementArticleViewCountEvent
     {
-        Guid Id { get; }
+        Guid CorrelationId { get; }
     }
 }

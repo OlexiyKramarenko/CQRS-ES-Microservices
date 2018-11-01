@@ -13,6 +13,6 @@ namespace Articles.Saga.Events.FromSaga.Events
             this.sagaState = sagaState;
         }
 
-        public Guid Id => sagaState.Id;
+        public Guid CorrelationId => sagaState.CorrelationId;
     }
 }
