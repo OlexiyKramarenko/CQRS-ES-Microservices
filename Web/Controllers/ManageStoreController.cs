@@ -1,18 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc; 
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using Web.Models.Store;
 
 namespace Web.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/v1/admin")]
     public class ManageStoreController : Controller
-    { 
+    {
         #region Products
         [HttpGet]
-        public IActionResult ManageProducts(int pageIndex, int pageSize)
+        [Route("products")]
+        public IActionResult GetProducts(int pageIndex, int pageSize)
         {
-            
             var list = new List<ProductItemViewModel>
             {
                 new ProductItemViewModel{
@@ -38,12 +38,15 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddProduct(AddProductViewModel model)
+        [Route("products")]
+        public IActionResult InsertProduct(AddProductViewModel model)
         {
             return Ok();
         }
+
         [HttpGet]
-        public IActionResult EditProduct(Guid id)
+        [Route("products/{productId:guid}")]
+        public IActionResult GetProduct(Guid productId)
         {
             var model = new EditProductViewModel
             {
@@ -58,21 +61,26 @@ namespace Web.Controllers
             return Ok(model);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateProduct(Guid id, AddProductViewModel model)
+        [HttpPut]
+        [Route("products/{productId:guid}")]
+        public IActionResult UpdateProduct(Guid productId, AddProductViewModel model)
         {
             return Ok();
         }
+
         [HttpGet]
-        public IActionResult DeleteProduct(Guid id)
+        [Route("products/{productId:guid}")]
+        public IActionResult DeleteProduct(Guid productId)
         {
             return Ok();
         }
+
         #endregion
 
         #region ShippingMethod
         [HttpGet]
-        public IActionResult ManageShippingMethods()
+        [Route("shipping-methods")]
+        public IActionResult GetShippingMethods()
         {
             var list = new List<ManageShippingMethodItemViewModel>
             {
@@ -93,18 +101,22 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult DeleteShippingMethod(Guid id)
+        [Route("shipping-methods/{methodId:guid}")]
+        public IActionResult DeleteShippingMethod(Guid methodId)
         {
             return Ok();
         }
 
         [HttpPost]
-        public IActionResult AddShippingMethod(AddShippingMethodViewModel model)
+        [Route("shipping-methods")]
+        public IActionResult InsertShippingMethod(AddShippingMethodViewModel model)
         {
             return Ok();
         }
+
         [HttpGet]
-        public IActionResult EditShippingMethod(Guid id)
+        [Route("shipping-methods/{methodId:guid}")]
+        public IActionResult FindShippingMethod(Guid methodId)
         {
             var model = new EditShippingMethodViewModel
             {
@@ -116,8 +128,9 @@ namespace Web.Controllers
             return Ok(model);
         }
 
-        [HttpPost("{id}")]
-        public IActionResult UpdateShippingMethod(Guid id, EditShippingMethodViewModel model)
+        [HttpPost]
+        [Route("shipping-methods/{methodId:guid}")]
+        public IActionResult UpdateShippingMethod(Guid methodId, EditShippingMethodViewModel model)
         {
             return Ok();
         }
@@ -125,7 +138,8 @@ namespace Web.Controllers
 
         #region Department
         [HttpGet]
-        public IActionResult ManageDepartments()
+        [Route("departments")]
+        public IActionResult GetDepartments()
         {
             var list = new List<DepartmentItemViewModel>
             {
@@ -138,20 +152,24 @@ namespace Web.Controllers
             };
             return Ok(list);
         }
+
         [HttpGet]
-        public IActionResult DeleteDepartment(Guid id)
+        [Route("departments/{departmentId:guid}")]
+        public IActionResult DeleteDepartment(Guid departmentId)
         {
             return Ok();
         }
 
         [HttpPost]
-        public IActionResult AddDepartment(AddDepartmentViewModel model)
+        [Route("departments")]
+        public IActionResult InsertDepartment(AddDepartmentViewModel model)
         {
             return Ok();
         }
 
         [HttpGet]
-        public IActionResult EditDepartment(Guid id)
+        [Route("departments/{departmentId:guid}")]
+        public IActionResult GetDepartment(Guid departmentId)
         {
             var model = new EditDepartmentViewModel
             {
@@ -164,8 +182,9 @@ namespace Web.Controllers
             return Ok(model);
         }
 
-        [HttpPost("{id}")]
-        public IActionResult UpdateDepartment(Guid id, EditDepartmentViewModel model)
+        [HttpPost]
+        [Route("departments/{departmentId:guid}")]
+        public IActionResult UpdateDepartment(Guid departmentId, EditDepartmentViewModel model)
         {
             return Ok();
         }
@@ -173,7 +192,8 @@ namespace Web.Controllers
 
         #region  Order
         [HttpGet]
-        public IActionResult ManageOrders()
+        [Route("orders")]
+        public IActionResult GetOrders()
         {
             var list = new List<ManageOrderItemViewModel>
             {
@@ -189,18 +209,23 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult DeleteOrder(Guid id)
+        [Route("orders/{orderId:guid}")]
+        public IActionResult DeleteOrder(Guid orderId)
         {
             return Ok();
         }
+
         [HttpGet]
-        public IActionResult OrderDetails(Guid id)
+        [Route("orders/{orderId:guid}")]
+        public IActionResult OrderDetails(Guid orderId)
         {
             return Ok();
         }
 
         [HttpPost]
-        public IActionResult UpdateOrderStatusId(Guid id, Guid statusId)
+        //[HttpPut]
+        [Route("orders/{orderId:guid}")]
+        public IActionResult UpdateOrderStatusId(Guid orderId, [FromBody]Guid statusId)
         {
             return Ok();
         }
@@ -208,7 +233,8 @@ namespace Web.Controllers
 
         #region  OrderStatus
         [HttpGet]
-        public IActionResult ManageOrderStatuses()
+        [Route("statuses")]
+        public IActionResult GetOrderStatuses()
         {
             var list = new List<ManageOrderItemViewModel>
             {
@@ -224,13 +250,15 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult DeleteOrderStatus(Guid id)
+        [Route("statuses/{statusId:guid}")]
+        public IActionResult DeleteOrderStatus(Guid statusId)
         {
             return Ok();
         }
 
         [HttpGet]
-        public IActionResult EditOrderStatus(Guid id)
+        [Route("statuses/{statusId:guid}")]
+        public IActionResult FindOrderStatus(Guid statusId)
         {
             var model = new EditOrderStatusViewModel
             {
@@ -241,15 +269,16 @@ namespace Web.Controllers
             return Ok(model);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateOrderStatus(Guid id, EditOrderStatusViewModel model)
+        [HttpPut]
+        [Route("statuses/{statusId:guid}")]
+        public IActionResult UpdateOrderStatus(Guid statusId, EditOrderStatusViewModel model)
         {
-
             return Ok();
         }
 
         [HttpPut]
-        public IActionResult AddOrderStatus(AddOrderStatusViewModel model)
+        [Route("statuses")]
+        public IActionResult InsertOrderStatus(AddOrderStatusViewModel model)
         {
             return Ok();
         }

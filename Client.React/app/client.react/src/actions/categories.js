@@ -50,7 +50,7 @@ export function categoryUpdated(category){
 export function fetchCategories() {
     
     return dispatch => {
-        fetch(`${SERVICE_BASE}/api/articles/ShowCategories`)
+        fetch(`${SERVICE_BASE}/api/v1/categories`)
             .then(res => res.json())  
             .then(data => dispatch(setCategories(data)));
     }
@@ -59,7 +59,7 @@ export function fetchCategories() {
 export function deleteCategory(id) {
     
     return dispatch =>{
-        return fetch(`${SERVICE_BASE}/api/manageArticles/deleteCategory/${id}`, {
+        return fetch(`${SERVICE_BASE}/api/v1/admin/categories/${id}`, {
             method: 'delete',            
             headers: {
                 "Content-Type": "application/json"
@@ -73,7 +73,7 @@ export function deleteCategory(id) {
 export function saveCategory(data){
 
     return dispatch =>{
-        return fetch(`${SERVICE_BASE}/api/manageArticles/addCategory`, {
+        return fetch(`${SERVICE_BASE}/api/v1/admin/categories`, {
             method: 'post',
             body: JSON.stringify(data),
             headers: {
@@ -88,7 +88,7 @@ export function saveCategory(data){
 export function updateCategory(data){
 
     return dispatch => {
-        return fetch(`${SERVICE_BASE}/api/manageArticles/updateCategory/${data.id}`, {
+        return fetch(`${SERVICE_BASE}/api/v1/admin/categories/${data.id}`, {
             method: 'put',
             body: JSON.stringify(data),
             headers: {
@@ -101,10 +101,10 @@ export function updateCategory(data){
 }
 
 
-export function fetchCategory(id) {
+export function fetchCategory(categoryId) {
     
     return dispatch => {
-        fetch(`${SERVICE_BASE}/api/manageArticles/editCategory/${id}`)
+        fetch(`${SERVICE_BASE}/api/v1/admin/categories/${categoryId}`)
             .then(res => res.json())  
             .then(data => dispatch(setCategory(data)));
     }

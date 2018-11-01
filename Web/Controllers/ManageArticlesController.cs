@@ -10,8 +10,7 @@ using Web.Models.Articles;
 
 namespace Web.Controllers
 {
-    //[Authorize(Roles = "Administrators, Editors")]
-    [Route("api/[controller]/[action]")]
+    [Route("api/v1/admin")]
     public class ManageArticlesController : Controller
     {
         private IMapper _mapper;
@@ -25,8 +24,9 @@ namespace Web.Controllers
 
         #region Articles
 
-        [HttpGet("{categoryId}")]
-        public async Task<IActionResult> ManageArticles(Guid categoryId)
+        [HttpGet]
+        [Route("categories/{categoryId:guid}/articles")]
+        public async Task<IActionResult> GetArticles(Guid categoryId)
         {
             ArticleDto[] dto = await _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 10);
             var model = _mapper.Map<ArticleItemViewModel[]>(dto);
@@ -34,32 +34,36 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> DeleteArticle(Guid id)
+        [Route("articles/{articleId:guid}")]
+        public async Task<IActionResult> DeleteArticle(Guid articleId)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
             await endPoint.Send<IDeleteArticleCommand>(new
             {
-                id
+                Id = articleId
             });
             return Ok();
         }
 
         [HttpPost]
-        public IActionResult AddArticle(AddArticleViewModel model)
+        [Route("articles")]
+        public IActionResult InsertArticle(AddArticleViewModel model)
         {
             return Ok(model);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> EditArticle(Guid id)
+        [HttpGet]
+        [Route("articles/{articleId:guid}")]
+        public async Task<IActionResult> GetArticle(Guid articleId)
         {
-            ArticleDto dto = await _articlesService.GetArticleByIdAsync(id);
+            ArticleDto dto = await _articlesService.GetArticleByIdAsync(articleId);
             var model = _mapper.Map<EditArticleViewModel>(dto);
             return Ok(model);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateArticle(Guid id, [FromBody]EditArticleViewModel model)
+        [HttpPut]
+        [Route("articles/{articleId:guid}")]
+        public async Task<IActionResult> UpdateArticle(Guid articleId, [FromBody]EditArticleViewModel model)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
             await endPoint.Send<IUpdateArticleCommand>(new
@@ -73,7 +77,8 @@ namespace Web.Controllers
 
         #region Categories
         [HttpGet]
-        public async Task<IActionResult> ManageCategories()
+        [Route("categories")]
+        public async Task<IActionResult> GetCategories()
         {
             CategoryDto[] dto = await _articlesService.GetCategoriesAsync();
             CategoryItemViewModel[] model = _mapper.Map<CategoryItemViewModel[]>(dto);
@@ -81,18 +86,20 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> DeleteCategory(Guid id)
+        [Route("categories/{categoryId:guid}")]
+        public async Task<IActionResult> DeleteCategory(Guid categoryId)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
             await endPoint.Send<IDeleteArticleCommand>(new
             {
-                Id = id
+                Id = categoryId
             });
             return Ok();
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCategory(AddCategoryViewModel model)
+        [Route("categories")]
+        public async Task<IActionResult> InsertCategory(AddCategoryViewModel model)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
             await endPoint.Send<IInsertCategoryCommand>(new
@@ -106,15 +113,17 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditCategory(Guid id)
+        [Route("categories/{categoryId:guid}")]
+        public async Task<IActionResult> FindCategory(Guid categoryId)
         {
-            CategoryDto dto = await _articlesService.GetCategoryByIdAsync(id);
+            CategoryDto dto = await _articlesService.GetCategoryByIdAsync(categoryId);
             var model = _mapper.Map<EditCategoryViewModel>(dto);
             return Ok(model);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCategory(Guid id, EditCategoryViewModel model)
+        [HttpPut]
+        [Route("categories/{categoryId:guid}")]
+        public async Task<IActionResult> UpdateCategory(Guid categoryId, EditCategoryViewModel model)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
             await endPoint.Send<IUpdateCategoryCommand>(new
@@ -132,8 +141,9 @@ namespace Web.Controllers
 
         #region Comments
 
-        [HttpGet("{articleId}")]
-        public async Task<IActionResult> ManageComments(Guid articleId)
+        [HttpGet]
+        [Route("articles/{articleId:guid}/comments")]
+        public async Task<IActionResult> GetComments(Guid articleId)
         {
             CommentDto[] dto = await _articlesService.GetCommentsByArticleIdAsync(articleId, 1, 20);
             var model = _mapper.Map<ManageCommentItemViewModel[]>(dto);
@@ -141,26 +151,29 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> DeleteComment(Guid id)
+        [Route("comments/{commentId:guid}")]
+        public async Task<IActionResult> DeleteComment(Guid commentId)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
             await endPoint.Send<IDeleteCommentCommand>(new
             {
-                Id = id
+                Id = commentId
             });
             return Ok();
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditComment(Guid id)
+        [Route("comments/{commentId:guid}")]
+        public async Task<IActionResult> GetComment(Guid commentId)
         {
-            CommentDto dto = await _articlesService.GetCommentByIdAsync(id);
+            CommentDto dto = await _articlesService.GetCommentByIdAsync(commentId);
             var model = _mapper.Map<EditCommentViewModel>(dto);
             return Ok(model);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateComment(Guid id, EditCommentViewModel model)
+        [HttpPut]
+        [Route("comments/{commentId:guid}")]
+        public async Task<IActionResult> UpdateComment(Guid commentId, EditCommentViewModel model)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);
             await endPoint.Send<IUpdateCommentCommand>(new

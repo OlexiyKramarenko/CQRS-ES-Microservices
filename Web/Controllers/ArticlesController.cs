@@ -9,7 +9,7 @@ using Web.Models.Articles;
 
 namespace Web.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/v1")]
     public class ArticlesController : Controller
     {
         private IMapper _mapper;
@@ -22,7 +22,8 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> BrowseArticles(Guid categoryId)
+        [Route("categories/{categoryId:guid}/articles")]
+        public async Task<IActionResult> GetArticles(Guid categoryId)
         {
             ArticleDto[] dto = await _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 20);
             var model = _mapper.Map<BrowseArticlesViewModel[]>(dto);
@@ -30,15 +31,17 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ShowArticle(Guid id)
+        [Route("articles/{articleId:guid}")]
+        public async Task<IActionResult> FindArticle(Guid articleId)
         {
-            ArticleDto dto = await _articlesService.GetArticleByIdAsync(id);
+            ArticleDto dto = await _articlesService.GetArticleByIdAsync(articleId);
             var model = _mapper.Map<ShowArticleViewModel>(dto);
             return Ok(model);
         }
 
         [HttpGet]
-        public async Task<IActionResult> ShowCategories()
+        [Route("categories")]
+        public async Task<IActionResult> GetCategories()
         {
             CategoryDto[] dto = await _articlesService.GetCategoriesAsync();
             var model = _mapper.Map<CategoryItemViewModel[]>(dto);
@@ -47,6 +50,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
+        [Route("comments")]
         public async Task<IActionResult> LeaveCommentAsync([FromBody] CommentDetailsViewModel model)
         {
             var endPoint = await BusConfigurator.GetEndPointAsync(RabbitMqConstants.ArticleWriteServiceQueue);

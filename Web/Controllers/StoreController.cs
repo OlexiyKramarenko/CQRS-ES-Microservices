@@ -6,12 +6,13 @@ using Web.Models.Store;
 
 namespace Web.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/v1/store")]
     public class StoreController : Controller
     { 
         #region Products
         [HttpGet]
-        public IActionResult ShowProduct(Guid id)
+        [Route("products/{id:guid}")]
+        public IActionResult FindProduct(Guid id)
         {
             var model = new ShowProductViewModel
             {
@@ -23,13 +24,15 @@ namespace Web.Controllers
         }
 
         [HttpDelete]
+        [Route("products/{id:guid}")]
         public IActionResult DeleteProduct(Guid id)
         {
             return Ok();
         }
 
         [HttpGet]
-        public IActionResult BrowseProducts(Guid departmentId)
+        [Route("departments/{departmentId:guid}/products")]
+        public IActionResult GetProducts(Guid departmentId)
         {
             var list = new List<ProductItemViewModel>
             {
@@ -48,7 +51,8 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult ShowDepartments()
+        [Route("departments")]
+        public IActionResult GetDepartments()
         {
             var list = new List<DepartmentItemViewModel>
             {
@@ -70,8 +74,10 @@ namespace Web.Controllers
         #endregion
 
         #region Shipping
+
         [HttpGet]
-        public IActionResult ShippingDetails(Guid id)
+        [Route("shipping-details/{id:guid}")]
+        public IActionResult FindShippingDetails(Guid id)
         {
             var model = new ShippingDetailsViewModel
             {
@@ -82,7 +88,8 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult ShippingMethods()
+        [Route("shipping-methods")]
+        public IActionResult GetShippingMethods()
         {
             var list = new List<ShippingMethodItemViewModel>
             {
@@ -96,12 +103,14 @@ namespace Web.Controllers
         }
 
         [HttpGet]
+        [Route("checkout")]
         public IActionResult Checkout()
         {
             return Ok();
         }
 
         [HttpPost]
+        [Route("checkout")]
         public IActionResult Checkout(CheckoutViewModel model)
         {
             return Ok();
@@ -111,25 +120,22 @@ namespace Web.Controllers
         #region ShoppingCart
 
         [HttpGet]
-        public IActionResult ShoppingCart()
+        [Route("shopping-cart")]
+        public IActionResult GetShoppingCart()
         {
             return Ok();
         }
-
+        
         [HttpPost]
-        public IActionResult ShoppingCart(IFormCollection form)
-        {
-            return Ok();
-        }
-
-        [HttpPost]
-        public IActionResult AddToShoppingCart(ShoppingCartItemViewModel model)
+        [Route("shopping-cart")]
+        public IActionResult InsertIntoShoppingCart(ShoppingCartItemViewModel model)
         {
             return Ok();
         }
 
         [HttpGet]
-        public IActionResult RemoveFromShoppingCart(Guid id)
+        [Route("shopping-cart/{itemId:guid}")]
+        public IActionResult DeleteFromShoppingCart(Guid itemId)
         {
             return Ok();
         }
@@ -138,18 +144,21 @@ namespace Web.Controllers
         #region Order
 
         [HttpGet]
-        public IActionResult OrderSummary()
+        [Route("order-summary")]
+        public IActionResult GetOrderSummary()
         {
             return Ok();
         }
 
         [HttpPost]
+        [Route("order-summary")]
         public IActionResult OrderSummary(OrderSummaryViewModel model)
         {
             return Ok();
         }
 
         [HttpGet]
+        [Route("order-completed")]
         public IActionResult OrderCompleted()
         {
             return Ok();

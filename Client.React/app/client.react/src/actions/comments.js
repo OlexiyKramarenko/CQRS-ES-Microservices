@@ -13,15 +13,15 @@ export function addComment(comment) {
 
 export function saveComment(data) {
     
-    return dispatch =>{
-        return fetch(`${SERVICE_BASE}/api/articles/LeaveCommentAsync`, {
+    return dispatch => {
+        return fetch(`${SERVICE_BASE}/api/v1/comments`, {
             method: 'post',
             body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json"
             }
         })
-        .then(handleResponse)
-        .then(data => dispatch(addComment(data.comment))); 
+            .then(handleResponse)
+            .then(data => dispatch(addComment(data.comment)));
     }
 } 
