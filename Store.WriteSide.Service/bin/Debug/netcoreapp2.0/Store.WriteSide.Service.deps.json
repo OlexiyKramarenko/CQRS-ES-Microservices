@@ -31,7 +31,10 @@
           "System.Threading.Timer": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard2.0/GreenPipes.dll": {}
+          "lib/netstandard2.0/GreenPipes.dll": {
+            "assemblyVersion": "1.2.1.98",
+            "fileVersion": "1.2.1.98"
+          }
         }
       },
       "MassTransit/4.0.1": {
@@ -48,7 +51,10 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard2.0/MassTransit.dll": {}
+          "lib/netstandard2.0/MassTransit.dll": {
+            "assemblyVersion": "4.0.1.1390",
+            "fileVersion": "4.0.1.1390"
+          }
         }
       },
       "MassTransit.RabbitMQ/4.0.1": {
@@ -60,7 +66,10 @@
           "RabbitMQ.Client": "5.0.1"
         },
         "runtime": {
-          "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {}
+          "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {
+            "assemblyVersion": "4.0.1.1390",
+            "fileVersion": "4.0.1.1390"
+          }
         }
       },
       "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
@@ -68,7 +77,10 @@
           "System.Reflection.TypeExtensions": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll": {}
+          "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.21115"
+          }
         }
       },
       "Microsoft.NETCore.Targets/1.1.0": {},
@@ -107,12 +119,18 @@
           "System.Net.NetworkInformation": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.6/NewId.dll": {}
+          "lib/netstandard1.6/NewId.dll": {
+            "assemblyVersion": "3.0.1.17",
+            "fileVersion": "3.0.1.17"
+          }
         }
       },
       "Newtonsoft.Json/11.0.2": {
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
         }
       },
       "Newtonsoft.Json.Bson/1.0.1": {
@@ -120,7 +138,10 @@
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
-          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.1.20722"
+          }
         }
       },
       "RabbitMQ.Client/5.0.1": {
@@ -144,7 +165,10 @@
           "System.Threading.Timer": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.5/RabbitMQ.Client.dll": {}
+          "lib/netstandard1.5/RabbitMQ.Client.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {

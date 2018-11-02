@@ -11,7 +11,7 @@ namespace Web.Controllers
         [HttpGet]
         public IActionResult GetShippingMethods()
         {
-            var list = new List<ManageShippingMethodItemViewModel>
+            var response = new List<ManageShippingMethodItemViewModel>
             {
                  new ManageShippingMethodItemViewModel
                  {
@@ -26,9 +26,25 @@ namespace Web.Controllers
                       Title = "aaaa aaa aaaaa"
                  },
             };
-            return Ok(list);
+            return Ok(response);
         }
 
+        [HttpGet]
+        [Route("{methodId:guid}")]
+        public IActionResult FindShippingMethod(Guid methodId)
+        {
+            var response = new EditShippingMethodViewModel
+            {
+                Id = Guid.NewGuid(),
+                AddedBy = "aaaa",
+                Title = "wwwwww wwwww",
+                Price = 5
+            };
+            return Ok(response);
+        }
+         
+        //TODO: Will be implemented later:
+        /*
         [HttpGet]
         [Route("{methodId:guid}")]
         public IActionResult DeleteShippingMethod(Guid methodId)
@@ -42,25 +58,12 @@ namespace Web.Controllers
             return Ok();
         }
 
-        [HttpGet]
-        [Route("{methodId:guid}")]
-        public IActionResult FindShippingMethod(Guid methodId)
-        {
-            var model = new EditShippingMethodViewModel
-            {
-                Id = Guid.NewGuid(),
-                AddedBy = "aaaa",
-                Title = "wwwwww wwwww",
-                Price = 5
-            };
-            return Ok(model);
-        }
-
         [HttpPost]
         [Route("{methodId:guid}")]
         public IActionResult UpdateShippingMethod(Guid methodId, EditShippingMethodViewModel model)
         {
             return Ok();
         }
+        */
     }
 }

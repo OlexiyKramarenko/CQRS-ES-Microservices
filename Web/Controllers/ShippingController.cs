@@ -12,19 +12,19 @@ namespace Server.Controllers
         [Route("details/{id:guid}")]
         public IActionResult FindShippingDetails(Guid id)
         {
-            var model = new ShippingDetailsViewModel
+            var response = new ShippingDetailsViewModel
             {
                 Title = "EEEEEE",
                 Price = 7
             };
-            return Ok(model);
+            return Ok(response);
         }
 
         [HttpGet]
         [Route("methods")]
         public IActionResult GetShippingMethods()
         {
-            var list = new List<ShippingMethodItemViewModel>
+            var response = new List<ShippingMethodItemViewModel>
             {
                  new ShippingMethodItemViewModel
                  {
@@ -32,7 +32,7 @@ namespace Server.Controllers
                       Text = "dddddddddd"
                  }
             };
-            return Ok(list);
+            return Ok(response);
         }
     }
 }

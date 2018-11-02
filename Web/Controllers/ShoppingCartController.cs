@@ -7,6 +7,8 @@ namespace Server.Controllers
     [Route("api/v1/shopping-cart")]
     public class ShoppingCartController : Controller
     {
+        //TODO: Will be implemented later:
+        /*
         [HttpGet]
         public IActionResult GetShoppingCart()
         {
@@ -25,5 +27,6 @@ namespace Server.Controllers
         {
             return Ok();
         }
+        */
     }
 }

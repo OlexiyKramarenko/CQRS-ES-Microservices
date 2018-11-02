@@ -41,10 +41,10 @@ G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Utils.dll
 G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Articles.Saga.Events.pdb
 G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Articles.WriteSide.Events.pdb
 G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Utils.pdb
-G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Infrastructure.pdb
 G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Articles.WriteSide.Commands.pdb
-G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Store.WriteSide.Events.pdb
 G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Articles.WriteSide.Repository.pdb
+G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Infrastructure.pdb
+G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Store.WriteSide.Events.pdb
 G:\EShopMicroservices\Articles.Saga.Service\bin\Debug\netcoreapp2.0\Store.WriteSide.Repository.pdb
 G:\EShopMicroservices\Articles.Saga.Service\obj\Debug\netcoreapp2.0\Articles.Saga.Service.csprojAssemblyReference.cache
 G:\EShopMicroservices\Articles.Saga.Service\obj\Debug\netcoreapp2.0\Articles.Saga.Service.csproj.CoreCompileInputs.cache

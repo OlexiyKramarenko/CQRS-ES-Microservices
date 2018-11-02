@@ -11,20 +11,24 @@ namespace Server.Controllers
         [Route("{id:guid}")]
         public IActionResult FindProduct(Guid id)
         {
-            var model = new ShowProductViewModel
+            var response = new ShowProductViewModel
             {
                 Id = Guid.NewGuid(),
                 Title = "qqqq",
                 Description = "rr r"
             };
-            return Ok(model);
+            return Ok(response);
         }
 
+        //TODO: Will be implemented later:
+        /*
         [HttpDelete]
         [Route("{id:guid}")]
         public IActionResult DeleteProduct(Guid id)
         {
             return Ok();
         }
+        */
     }
 }
+ 

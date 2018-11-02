@@ -8,7 +8,7 @@ using Web.Models.Articles;
 namespace Server.Controllers
 {
     [Route("api/v1/categories")]
-    public class CategoriesController : Controller
+    public class CategoriesController : BaseController
     {
         private readonly IMapper _mapper;
         private readonly ArticlesServiceClient _articlesService;
@@ -23,17 +23,35 @@ namespace Server.Controllers
         [Route("{categoryId:guid}/articles")]
         public async Task<IActionResult> GetArticles(Guid categoryId)
         {
-            ArticleDto[] dto = await _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 20);
-            var model = _mapper.Map<BrowseArticlesViewModel[]>(dto);
-            return Ok(model);
+            try
+            {
+                ArticleDto[] dto = await _articlesService.GetArticlesByCategoryIdAsync(categoryId, 1, 20);
+
+                var response = _mapper.Map<BrowseArticlesViewModel[]>(dto);
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
 
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
-            CategoryDto[] dto = await _articlesService.GetCategoriesAsync();
-            var model = _mapper.Map<CategoryItemViewModel[]>(dto);
-            return Ok(model);
+            try
+            {
+                CategoryDto[] dto = await _articlesService.GetCategoriesAsync();
+
+                var response = _mapper.Map<CategoryItemViewModel[]>(dto);
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
     }
 }

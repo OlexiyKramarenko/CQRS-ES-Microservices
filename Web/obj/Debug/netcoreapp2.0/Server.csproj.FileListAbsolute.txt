@@ -13,11 +13,11 @@ G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Store.WriteSide.Repository.dll
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Utils.dll
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Articles.ReadSide.Repository.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Utils.pdb
-G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Infrastructure.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Articles.WriteSide.Commands.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Articles.WriteSide.Events.pdb
-G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Store.WriteSide.Events.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Articles.WriteSide.Repository.pdb
+G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Infrastructure.pdb
+G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Store.WriteSide.Events.pdb
 G:\EShopMicroservices\Web\bin\Debug\netcoreapp2.0\Store.WriteSide.Repository.pdb
 G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.csprojAssemblyReference.cache
 G:\EShopMicroservices\Web\obj\Debug\netcoreapp2.0\Server.csproj.CoreCompileInputs.cache

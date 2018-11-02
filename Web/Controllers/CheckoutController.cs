@@ -5,7 +5,9 @@ namespace Web.Controllers
 {
     [Route("api/v1/checkout")]
     public class CheckoutController : Controller
-    { 
+    {
+        //TODO: Will be implemented later:
+        /*
         [HttpGet]
         [Route("checkout")]
         public IActionResult Checkout()
@@ -19,5 +21,6 @@ namespace Web.Controllers
         {
             return Ok();
         }
+        */
     }
 }

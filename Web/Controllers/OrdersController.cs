@@ -7,6 +7,8 @@ namespace Server.Controllers
     [Route("api/v1/orders")]
     public class OrdersController : Controller
     {
+        //TODO: Will be implemented later:
+        /*
         [HttpGet]
         [Route("summary")]
         public IActionResult GetOrderSummary()
@@ -34,5 +36,6 @@ namespace Server.Controllers
         {
             return Ok();
         }
+        */
     }
 }
