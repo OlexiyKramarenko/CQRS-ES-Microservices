@@ -10,7 +10,6 @@ F:\EShopMicroservices\Articles.ReadSide.Repository\obj\Debug\netstandard2.0\Arti
 G:\EShopMicroservices\Articles.ReadSide.Repository\bin\Debug\netstandard2.0\Articles.ReadSide.Repository.deps.json
 G:\EShopMicroservices\Articles.ReadSide.Repository\bin\Debug\netstandard2.0\Articles.ReadSide.Repository.dll
 G:\EShopMicroservices\Articles.ReadSide.Repository\bin\Debug\netstandard2.0\Articles.ReadSide.Repository.pdb
-G:\EShopMicroservices\Articles.ReadSide.Repository\obj\Debug\netstandard2.0\Articles.ReadSide.Repository.csprojAssemblyReference.cache
 G:\EShopMicroservices\Articles.ReadSide.Repository\obj\Debug\netstandard2.0\Articles.ReadSide.Repository.csproj.CoreCompileInputs.cache
 G:\EShopMicroservices\Articles.ReadSide.Repository\obj\Debug\netstandard2.0\Articles.ReadSide.Repository.AssemblyInfoInputs.cache
 G:\EShopMicroservices\Articles.ReadSide.Repository\obj\Debug\netstandard2.0\Articles.ReadSide.Repository.AssemblyInfo.cs

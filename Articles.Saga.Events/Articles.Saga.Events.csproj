@@ -9,10 +9,4 @@
     <PackageReference Include="MassTransit.Automatonymous" Version="4.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="netstandard">
-      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\netstandard.library\2.0.1\build\netstandard2.0\ref\netstandard.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
