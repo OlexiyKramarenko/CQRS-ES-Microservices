@@ -1,7 +1,5 @@
 ﻿using Infrastructure.Domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Articles.WriteSide.Aggregates
 {
@@ -20,6 +18,4 @@ namespace Articles.WriteSide.Aggregates
             Data = data;
         }
     }
-
-
 }
