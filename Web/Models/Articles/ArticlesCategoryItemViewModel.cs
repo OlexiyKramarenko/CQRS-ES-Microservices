@@ -1,5 +1,4 @@
-﻿
-namespace Web.Models.Articles
+﻿namespace Web.Models.Articles
 {
 	public class ArticlesCategoryItemViewModel
 	{

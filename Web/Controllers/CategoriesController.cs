@@ -21,7 +21,7 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("{categoryId:guid}/articles")]
-        public async Task<IActionResult> GetArticles(Guid categoryId)
+        public async Task<IActionResult> GetArticlesAsync(Guid categoryId)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetCategories()
+        public async Task<IActionResult> GetCategoriesAsync()
         {
             try
             {

@@ -25,7 +25,7 @@ namespace Web.Controllers
 
         [HttpGet]
         [Route("{articleId:guid}")]
-        public async Task<IActionResult> DeleteArticle(Guid articleId)
+        public async Task<IActionResult> DeleteArticleAsync(Guid articleId)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace Web.Controllers
 
         [HttpGet]
         [Route("{articleId:guid}")]
-        public async Task<IActionResult> FindArticle(Guid articleId)
+        public async Task<IActionResult> FindArticleAsync(Guid articleId)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace Web.Controllers
 
         [HttpPut]
         [Route("{articleId:guid}")]
-        public async Task<IActionResult> UpdateArticle(Guid articleId, [FromBody]EditArticleViewModel model)
+        public async Task<IActionResult> UpdateArticleAsync(Guid articleId, [FromBody]EditArticleViewModel model)
         {
             try
             {

@@ -24,7 +24,7 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("{commentId:guid}")]
-        public async Task<IActionResult> DeleteComment(Guid commentId)
+        public async Task<IActionResult> DeleteCommentAsync(Guid commentId)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("{commentId:guid}")]
-        public async Task<IActionResult> FindComment(Guid commentId)
+        public async Task<IActionResult> FindCommentAsync(Guid commentId)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace Server.Controllers
 
         [HttpPut]
         [Route("{commentId:guid}")]
-        public async Task<IActionResult> UpdateComment(Guid commentId, EditCommentViewModel model)
+        public async Task<IActionResult> UpdateCommentAsync(Guid commentId, EditCommentViewModel model)
         {
             try
             {

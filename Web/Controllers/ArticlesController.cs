@@ -22,7 +22,7 @@ namespace Web.Controllers
 
         [HttpGet]
         [Route("{articleId:guid}")]
-        public async Task<IActionResult> FindArticle(Guid articleId)
+        public async Task<IActionResult> FindArticleAsync(Guid articleId)
         {
             try
             {
@@ -45,13 +45,13 @@ namespace Web.Controllers
 
         [HttpGet]
         [Route("{articleId:guid}/comments")]
-        public async Task<IActionResult> GetComments(Guid articleId)
+        public async Task<IActionResult> GetCommentsAsync(Guid articleId)
         {
             try
             {
                 CommentDto[] dto = await _articlesService.GetCommentsByArticleIdAsync(articleId, 1, 20);
 
-                var response = _mapper.Map<ManageCommentItemViewModel[]>(dto);
+                var response = _mapper.Map<CommentItemViewModel[]>(dto);
 
                 return Ok(response);
             }

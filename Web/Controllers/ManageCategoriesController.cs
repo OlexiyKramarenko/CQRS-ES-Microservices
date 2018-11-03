@@ -23,7 +23,7 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetCategories()
+        public async Task<IActionResult> GetCategoriesAsync()
         {
             try
             {
@@ -41,7 +41,7 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("{categoryId:guid}/articles")]
-        public async Task<IActionResult> GetArticles(Guid categoryId)
+        public async Task<IActionResult> GetArticlesAsync(Guid categoryId)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("{categoryId:guid}")]
-        public async Task<IActionResult> DeleteCategory(Guid categoryId)
+        public async Task<IActionResult> DeleteCategoryAsync(Guid categoryId)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertCategory(AddCategoryViewModel model)
+        public async Task<IActionResult> InsertCategoryAsync(AddCategoryViewModel model)
         {
             try
             {
@@ -111,7 +111,7 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("{categoryId:guid}")]
-        public async Task<IActionResult> FindCategory(Guid categoryId)
+        public async Task<IActionResult> FindCategoryAsync(Guid categoryId)
         {
             try
             {
@@ -134,7 +134,7 @@ namespace Server.Controllers
 
         [HttpPut]
         [Route("{categoryId:guid}")]
-        public async Task<IActionResult> UpdateCategory(Guid categoryId, [FromBody]EditCategoryViewModel model)
+        public async Task<IActionResult> UpdateCategoryAsync(Guid categoryId, [FromBody]EditCategoryViewModel model)
         {
             try
             {

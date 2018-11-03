@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Web.Models.Articles
+﻿namespace Web.Models.Articles
 {
     public class EditCategoryViewModel
     {
