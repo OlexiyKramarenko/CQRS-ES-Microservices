@@ -35,7 +35,7 @@ namespace Web.Controllers
                     Id = articleId
                 });
 
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {
@@ -60,7 +60,7 @@ namespace Web.Controllers
 
                 //TODO: Implement some logic here.
 
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {
@@ -114,7 +114,7 @@ namespace Web.Controllers
                     model.Body
                 });
 
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {

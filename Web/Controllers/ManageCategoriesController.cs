@@ -69,7 +69,7 @@ namespace Server.Controllers
                     Id = categoryId
                 });
 
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {
@@ -101,7 +101,7 @@ namespace Server.Controllers
                     model.Title
                 });
 
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {
@@ -158,7 +158,7 @@ namespace Server.Controllers
                     model.Title
                 });
 
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {

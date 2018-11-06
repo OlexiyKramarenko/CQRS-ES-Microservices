@@ -33,7 +33,7 @@ namespace Server.Controllers
                 {
                     Id = commentId
                 });
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {
@@ -89,7 +89,7 @@ namespace Server.Controllers
                     model.Comment,
                     model.UserIp
                 });
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {

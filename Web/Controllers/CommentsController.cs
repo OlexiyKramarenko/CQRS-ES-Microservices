@@ -48,7 +48,7 @@ namespace Server.Controllers
                     model.Body
                 });
 
-                return NoContent();
+                return Accepted();
             }
             catch (Exception ex)
             {
