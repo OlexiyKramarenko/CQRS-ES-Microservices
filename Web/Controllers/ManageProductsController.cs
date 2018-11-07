@@ -35,10 +35,9 @@ namespace Server.Controllers
             return Ok(response);
         }
 
-        
 
-        [HttpGet]
-        [Route("{productId:guid}")]
+
+        [HttpGet("{productId:guid}")]
         public IActionResult GetProduct(Guid productId)
         {
             var response = new EditProductViewModel

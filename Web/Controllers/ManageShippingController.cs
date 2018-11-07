@@ -29,8 +29,7 @@ namespace Web.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        [Route("{methodId:guid}")]
+        [HttpGet("{methodId:guid}")]
         public IActionResult FindShippingMethod(Guid methodId)
         {
             var response = new EditShippingMethodViewModel
@@ -42,7 +41,7 @@ namespace Web.Controllers
             };
             return Ok(response);
         }
-         
+
         //TODO: Will be implemented later:
         /*
         [HttpGet]

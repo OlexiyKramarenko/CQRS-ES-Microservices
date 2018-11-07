@@ -24,10 +24,9 @@ namespace Server.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        [Route("statuses")]
+        [HttpGet("statuses")]
         public IActionResult GetOrderStatuses()
-        { 
+        {
             var response = new List<ManageOrderItemViewModel>
                 {
                     new ManageOrderItemViewModel
@@ -42,10 +41,9 @@ namespace Server.Controllers
 
         }
 
-        [HttpGet]
-        [Route("statuses/{statusId:guid}")]
+        [HttpGet("statuses/{statusId:guid}")]
         public IActionResult FindOrderStatus(Guid statusId)
-        { 
+        {
             var response = new EditOrderStatusViewModel
             {
                 Id = Guid.NewGuid(),

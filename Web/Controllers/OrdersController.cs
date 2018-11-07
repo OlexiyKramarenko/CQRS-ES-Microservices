@@ -4,7 +4,7 @@ using Web.Models.Store;
 
 namespace Server.Controllers
 {
-    [Route("api/v1/orders")]
+    //[Route("api/v1/orders")]
     public class OrdersController : Controller
     {
         //TODO: Will be implemented later:

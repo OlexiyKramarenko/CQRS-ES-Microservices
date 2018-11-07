@@ -7,8 +7,7 @@ namespace Server.Controllers
     [Route("api/v1/products")]
     public class ProductsController : Controller
     {
-        [HttpGet]
-        [Route("{id:guid}")]
+        [HttpGet("{id:guid}")]
         public IActionResult FindProduct(Guid id)
         {
             var response = new ShowProductViewModel
@@ -31,4 +30,3 @@ namespace Server.Controllers
         */
     }
 }
- 

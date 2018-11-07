@@ -24,8 +24,7 @@ namespace Server.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        [Route("{departmentId:guid}")]
+        [HttpGet("{departmentId:guid}")]
         public IActionResult GetDepartment(Guid departmentId)
         {
             var response = new EditDepartmentViewModel

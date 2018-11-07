@@ -19,8 +19,7 @@ namespace Server.Controllers
             _articlesService = new ArticlesServiceClient();
         }
 
-        [HttpGet]
-        [Route("{categoryId:guid}/articles")]
+        [HttpGet("{categoryId:guid}/articles")]
         public async Task<IActionResult> GetArticlesAsync(Guid categoryId)
         {
             try

@@ -8,8 +8,7 @@ namespace Server.Controllers
     [Route("api/v1/shipping")]
     public class ShippingController : Controller
     {
-        [HttpGet]
-        [Route("details/{id:guid}")]
+        [HttpGet("details/{id:guid}")]
         public IActionResult FindShippingDetails(Guid id)
         {
             var response = new ShippingDetailsViewModel
@@ -20,8 +19,7 @@ namespace Server.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        [Route("methods")]
+        [HttpGet("methods")]
         public IActionResult GetShippingMethods()
         {
             var response = new List<ShippingMethodItemViewModel>

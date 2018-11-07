@@ -23,8 +23,7 @@ namespace Web.Controllers
             _articlesService = new ArticlesServiceClient();
         }
 
-        [HttpGet]
-        [Route("{articleId:guid}")]
+        [HttpDelete("{articleId:guid}")]
         public async Task<IActionResult> DeleteArticleAsync(Guid articleId)
         {
             try
@@ -68,8 +67,7 @@ namespace Web.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("{articleId:guid}")]
+        [HttpGet("{articleId:guid}")]
         public async Task<IActionResult> FindArticleAsync(Guid articleId)
         {
             try
@@ -91,8 +89,7 @@ namespace Web.Controllers
             }
         }
 
-        [HttpPut]
-        [Route("{articleId:guid}")]
+        [HttpPut("{articleId:guid}")]
         public async Task<IActionResult> UpdateArticleAsync(Guid articleId, [FromBody]EditArticleViewModel model)
         {
             try

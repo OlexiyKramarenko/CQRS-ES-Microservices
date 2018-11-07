@@ -36,8 +36,7 @@ namespace Server.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("{departmentId:guid}/products")]
+        [HttpGet("{departmentId:guid}/products")]
         public IActionResult GetProducts(Guid departmentId)
         {
             try

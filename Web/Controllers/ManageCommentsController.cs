@@ -22,8 +22,7 @@ namespace Server.Controllers
             _articlesService = new ArticlesServiceClient();
         }
 
-        [HttpGet]
-        [Route("{commentId:guid}")]
+        [HttpDelete("{commentId:guid}")]
         public async Task<IActionResult> DeleteCommentAsync(Guid commentId)
         {
             try
@@ -41,8 +40,7 @@ namespace Server.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("{commentId:guid}")]
+        [HttpGet("{commentId:guid}")]
         public async Task<IActionResult> FindCommentAsync(Guid commentId)
         {
             try
@@ -64,8 +62,7 @@ namespace Server.Controllers
             }
         }
 
-        [HttpPut]
-        [Route("{commentId:guid}")]
+        [HttpPut("{commentId:guid}")]
         public async Task<IActionResult> UpdateCommentAsync(Guid commentId, EditCommentViewModel model)
         {
             try

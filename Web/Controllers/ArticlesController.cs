@@ -20,8 +20,7 @@ namespace Web.Controllers
             _articlesService = new ArticlesServiceClient();
         }
 
-        [HttpGet]
-        [Route("{articleId:guid}")]
+        [HttpGet("{articleId:guid}")]
         public async Task<IActionResult> FindArticleAsync(Guid articleId)
         {
             try
@@ -43,8 +42,7 @@ namespace Web.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("{articleId:guid}/comments")]
+        [HttpGet("{articleId:guid}/comments")]
         public async Task<IActionResult> GetCommentsAsync(Guid articleId)
         {
             try
