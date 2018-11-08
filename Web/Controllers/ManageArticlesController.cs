@@ -1,5 +1,6 @@
 ﻿using Articles.WriteSide.Commands;
 using AutoMapper;
+using log4net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Server.Controllers;
@@ -15,12 +16,15 @@ namespace Web.Controllers
     public class ManageArticlesController : BaseController
     {
         private readonly IMapper _mapper;
-        private readonly ArticlesServiceClient _articlesService;
+        private readonly IArticlesService _articlesService;
+        private readonly ILog _logger;
 
-        public ManageArticlesController(IMapper mapper)
+        public ManageArticlesController(IMapper mapper, IArticlesService articlesService, ILog logger)
+            : base(logger)
         {
             _mapper = mapper;
-            _articlesService = new ArticlesServiceClient();
+            _articlesService = articlesService;
+            _logger = logger;
         }
 
         [HttpDelete("{articleId:guid}")]

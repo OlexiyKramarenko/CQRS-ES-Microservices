@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
+using log4net;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging; 
+using ServiceReference1;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Web
@@ -33,6 +36,8 @@ namespace Web
             });
             services.AddAutoMapper();
             services.AddMvc();
+            services.AddSingleton(LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType));
+            services.AddTransient<IArticlesService, ArticlesServiceClient>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Microservices API", Version = "v1" });
@@ -40,7 +45,7 @@ namespace Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseSwagger();
             app.UseSwaggerUI(c =>
@@ -52,6 +57,7 @@ namespace Web
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors("AllowAll");
+            loggerFactory.AddLog4Net();
             app.UseMvc();
         }
     }

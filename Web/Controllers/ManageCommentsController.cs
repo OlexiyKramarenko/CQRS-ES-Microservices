@@ -1,5 +1,6 @@
 ﻿using Articles.WriteSide.Commands;
 using AutoMapper;
+using log4net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServiceReference1;
@@ -14,12 +15,15 @@ namespace Server.Controllers
     public class ManageCommentsController : BaseController
     {
         private readonly IMapper _mapper;
-        private readonly ArticlesServiceClient _articlesService;
+        private readonly IArticlesService _articlesService;
+        private readonly ILog _logger;
 
-        public ManageCommentsController(IMapper mapper)
+        public ManageCommentsController(IMapper mapper, IArticlesService articlesService, ILog logger)
+            : base(logger)
         {
             _mapper = mapper;
-            _articlesService = new ArticlesServiceClient();
+            _articlesService = articlesService;
+            _logger = logger;
         }
 
         [HttpDelete("{commentId:guid}")]

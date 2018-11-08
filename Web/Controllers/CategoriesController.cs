@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using log4net;
 using Microsoft.AspNetCore.Mvc;
 using ServiceReference1;
 using System;
@@ -11,12 +12,15 @@ namespace Server.Controllers
     public class CategoriesController : BaseController
     {
         private readonly IMapper _mapper;
-        private readonly ArticlesServiceClient _articlesService;
+        private readonly IArticlesService _articlesService;
+        private readonly ILog _logger;
 
-        public CategoriesController(IMapper mapper)
+        public CategoriesController(IMapper mapper, IArticlesService articlesService, ILog logger)
+            : base(logger)
         {
             _mapper = mapper;
-            _articlesService = new ArticlesServiceClient();
+            _articlesService = articlesService;
+            _logger = logger;
         }
 
         [HttpGet("{categoryId:guid}/articles")]

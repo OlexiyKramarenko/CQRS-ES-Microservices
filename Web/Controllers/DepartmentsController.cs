@@ -6,14 +6,12 @@ using Web.Models.Store;
 namespace Server.Controllers
 {
     [Route("api/v1/departments")]
-    public class DepartmentsController : BaseController
+    public class DepartmentsController : Controller
     {
         [HttpGet]
         public IActionResult GetDepartments()
         {
-            try
-            {
-                var response = new List<DepartmentItemViewModel>
+            var response = new List<DepartmentItemViewModel>
                 {
                     new DepartmentItemViewModel
                     {
@@ -28,20 +26,14 @@ namespace Server.Controllers
                          Description = "rrrrr"
                     },
                 };
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            return Ok(response);
         }
 
         [HttpGet("{departmentId:guid}/products")]
         public IActionResult GetProducts(Guid departmentId)
         {
-            try
-            {
-                var response = new List<ProductItemViewModel>
+            var response = new List<ProductItemViewModel>
                 {
                    new ProductItemViewModel
                    {
@@ -54,12 +46,8 @@ namespace Server.Controllers
                         UnitsInStock = 4
                    }
                 };
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            return Ok(response);
         }
     }
 }

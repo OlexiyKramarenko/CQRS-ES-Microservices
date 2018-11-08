@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using log4net;
+using log4net.Config;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using System.IO;
+using System.Reflection;
 
 namespace Web
 {
@@ -14,6 +11,7 @@ namespace Web
     {
         public static void Main(string[] args)
         {
+            ConfigureLogger();
             BuildWebHost(args).Run();
         }
 
@@ -21,5 +19,11 @@ namespace Web
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
+
+        private static void ConfigureLogger()
+        {
+            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
     }
 }

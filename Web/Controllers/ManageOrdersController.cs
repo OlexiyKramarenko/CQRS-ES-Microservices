@@ -6,7 +6,7 @@ using Web.Models.Store;
 namespace Server.Controllers
 {
     [Route("api/v1/admin/orders")]
-    public class ManageOrdersController : BaseController
+    public class ManageOrdersController : Controller
     {
         [HttpGet]
         public IActionResult GetOrders()
